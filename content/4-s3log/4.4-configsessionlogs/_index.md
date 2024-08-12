@@ -12,7 +12,7 @@ pre : " <b> 4.4 </b> "
   + Click the **Preferences** tab.
   + Click **Edit**.
   
-![S3](/images/4.s3/010-s3.png)
+![S3](images/1.account/001-taikhoan.png)
 
 2. Scroll down, at **S3 logging**, click **Enable**.
   + Uncheck **Allow only encrypted S3 buckets**.

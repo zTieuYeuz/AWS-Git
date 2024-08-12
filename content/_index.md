@@ -19,4 +19,4 @@ chapter : false
  4. [Manage session logs](4-s3log/)
  5. [Port Forwarding](5-Portfwd/)
  6. [Clean up resources](6-cleanup/)
- 7. [test](7-test/)
+ 7. [taikhoan](7-taikhoan/)

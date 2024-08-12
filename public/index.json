@@ -4,7 +4,7 @@
 	"title": "Session Management",
 	"tags": [],
 	"description": "",
-	"content": "Work with Amazon System Manager - Session Manager Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Preparation Connect to EC2 instance Manage session logs Port Forwarding Clean up resources test "
+	"content": "Work with Amazon System Manager - Session Manager Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Preparation Connect to EC2 instance Manage session logs Port Forwarding Clean up resources taikhoan "
 },
 {
 	"uri": "//localhost:1313/3-accessibilitytoinstances/3.1-public-instance/",
@@ -182,11 +182,25 @@
 	"content": "We will take the following steps to delete the resources we created in this exercise.\nDelete EC2 instance Go to EC2 service management console\nClick Instances. Select both Public Linux Instance and Private Windows Instance instances. Click Instance state. Click Terminate instance, then click Terminate to confirm. Go to IAM service management console\nClick Roles. In the search box, enter SSM. Click to select SSM-Role. Click Delete, then enter the role name SSM-Role and click Delete to delete the role. Click Users. Click on user Portfwd. Click Delete, then enter the user name Portfwd and click Delete to delete the user. Delete S3 bucket Access System Manager - Session Manager service management console.\nClick the Preferences tab. Click Edit. Scroll down. In the section S3 logging. Uncheck Enable to disable logging. Scroll down. Click Save. Go to S3 service management console\nClick on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 ) Click Empty. Enter permanently delete, then click Empty to proceed to delete the object in the bucket. Click Exit. After deleting all objects in the bucket, click Delete\nEnter the name of the S3 bucket, then click Delete bucket to proceed with deleting the S3 bucket. Delete VPC Endpoints Go to VPC service management console Click Endpoints. Select the 4 endpoints we created for the lab including SSM, SSMMESSAGES, EC2MESSAGES, S3GW. Click Actions. Click Delete VPC endpoints. In the confirm box, enter delete.\nClick Delete to proceed with deleting endpoints. Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.\nDelete VPC Go to VPC service management console\nClick Your VPCs. Click on Lab VPC. Click Actions. Click Delete VPC. In the confirm box, enter delete to confirm, click Delete to delete Lab VPC and related resources.\n"
 },
 {
-	"uri": "//localhost:1313/7-test/",
-	"title": "test",
+	"uri": "//localhost:1313/7-taikhoan/7.2-create_user_group/7.2.3-accesskey-and-reset-password/",
+	"title": "AccessKey and reset password",
 	"tags": [],
 	"description": "",
-	"content": "We will take the following steps to delete the resources we created in this exercise.\nDelete EC2 instance Go to EC2 service management console\nClick Instances. Select both Public Linux Instance and Private Windows Instance instances. Click Instance state. Click Terminate instance, then click Terminate to confirm. Go to IAM service management console\nClick Roles. In the search box, enter SSM. Click to select SSM-Role. Click Delete, then enter the role name SSM-Role and click Delete to delete the role. Click Users. Click on user Portfwd. Click Delete, then enter the user name Portfwd and click Delete to delete the user. Delete S3 bucket Access System Manager - Session Manager service management console.\nClick the Preferences tab. Click Edit. Scroll down. In the section S3 logging. Uncheck Enable to disable logging. Scroll down. Click Save. Go to S3 service management console\nClick on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 ) Click Empty. Enter permanently delete, then click Empty to proceed to delete the object in the bucket. Click Exit. After deleting all objects in the bucket, click Delete\nEnter the name of the S3 bucket, then click Delete bucket to proceed with deleting the S3 bucket. Delete VPC Endpoints Go to VPC service management console Click Endpoints. Select the 4 endpoints we created for the lab including SSM, SSMMESSAGES, EC2MESSAGES, S3GW. Click Actions. Click Delete VPC endpoints. In the confirm box, enter delete.\nClick Delete to proceed with deleting endpoints. Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.\nDelete VPC Go to VPC service management console\nClick Your VPCs. Click on Lab VPC. Click Actions. Click Delete VPC. In the confirm box, enter delete to confirm, click Delete to delete Lab VPC and related resources.\n"
+	"content": " Đăng nhập vào console AWS IAM\\ Video hướng dẫn \\ "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/7.1-mfa-alias/7.1.2-alias/",
+	"title": "Alias",
+	"tags": [],
+	"description": "",
+	"content": "Alias Cho tài khoản Đăng nhập vào console AWS IAM click vào IAM Click vào create Alias Điền Alias mình muốn hiển thị Ta thoát tài khoản và đăng nhập lại , ta đã có thể điền tên thay vì 1 dãy số "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/7.2-create_user_group/7.2.2-group/",
+	"title": "Create Group User",
+	"tags": [],
+	"description": "",
+	"content": " Đăng nhập vào console AWS IAM Click vào IAM và chọn \u0026ldquo;Group User\u0026rdquo; để tạo Điền thông tin Group Điền tên Group Xét quyền cho Group ở đây ta cho full quyền administrator và quyền Billing Tạo group thành công "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.6-createec2windows/",
@@ -194,6 +208,41 @@
 	"tags": [],
 	"description": "",
 	"content": " Go to EC2 service management console Click Instances. Click Launch instances. On the Step 1: Choose an Amazon Machine Image (AMI) page. Drag the mouse down. Click Select to select AMI Microsoft Windows Server 2019 Base. On the Step 2: Choose an Instance Type page. Click on Instance type t2.micro. Click Next: Configure Instance Details. At Step 3: Configure Instance Details page In the Network section, select Lab VPC. In the Subnet section, select Lab Private Subnet. At Auto-assign Public IP select Use subnet setting (Disable) Click Next: Add Storage. Click Next: Add Tags to move to the next step. Click Next: Configure Security Group to move to the next step. On page Step 6: Configure Security Group. Select Select an existing security group. Select security group SG Private Windows Instance. Click Review and Launch. The warning dialog box appears because we do not configure the firewall to allow connections to port 22, Click Continue to continue.\nAt page Step 7: Review Instance Launch.\nClick Launch. In the Select an existing key pair or create a new key pair dialog box. Click Choose an existing key pair. In the Key pair name section, select LabKeypair. Click I acknowledge that I have access to the corresponding private key file, and that without this file, I won\u0026rsquo;t be able to log into my instance.. Click Launch Instances to create EC2 server. Click View Instances to return to the list of EC2 instances.\nClick the edit icon under the Name column.\nIn the Edit Name dialog box, enter Private Windows Instance. Click Save. Next, we will proceed to create IAM Roles to serve the Session Manager.\n"
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/7.2-create_user_group/7.2.1-user/",
+	"title": "Create User",
+	"tags": [],
+	"description": "",
+	"content": " Đăng nhập vào console AWS IAM Click chọn User Điền thông tin user ta muốn tạo Điền tên user Tạo IAM user Create Password Chọn group cho user và review chọn group quyền cho user Review user Tạo user thành công Ta có password và đường link đăng nhập tài khoản "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/7.2-create_user_group/",
+	"title": "Create user Group",
+	"tags": [],
+	"description": "",
+	"content": " Create User Create Group user "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/7.1-mfa-alias/7.1.1-mfa/",
+	"title": "MFA",
+	"tags": [],
+	"description": "",
+	"content": "MFA Cho AWS Đăng nhập vào console AWS IAM click vào IAM Click vào MFA trong dashboard Điền thông tin của MFA cho tài khoản Điền divice name và chọn authenticator app Show mã QR Tải app cho MFA Googgle authenticator Microsoft authenticator authy Quét mã QR và điền mã điền 2 lần mã vào ô phía dưới Sau khi AWS đã xác nhận xong chúng ta quay về đăng nhập yêu cầu mã MFA Từ đây khi đăng nhập AWS ta đã được bảo vệ "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/7.1-mfa-alias/",
+	"title": "MFA-Alias",
+	"tags": [],
+	"description": "",
+	"content": "Phụ lục\nMFA Alias "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/",
+	"title": "Tài khoản",
+	"tags": [],
+	"description": "",
+	"content": "Phụ lục\nMFA Budgets "
 },
 {
 	"uri": "//localhost:1313/categories/",
