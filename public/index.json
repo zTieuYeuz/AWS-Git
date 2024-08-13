@@ -196,13 +196,6 @@
 	"content": "Phụ lục\nRole AWS Policy AWS "
 },
 {
-	"uri": "//localhost:1313/7-taikhoan/",
-	"title": "Accounting",
-	"tags": [],
-	"description": "",
-	"content": "Phụ lục\nMFA-Alias User and Group Role and Policy Budgets "
-},
-{
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/",
 	"title": "Create security groups",
 	"tags": [],
@@ -264,6 +257,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Đăng nhập vào console AWS IAM Click chọn Role Click \u0026ldquo;create role\u0026rdquo; Click Select trusted ntity click AWS service Service or use case : ec2 use case : ec2 Set permission policies Click amazonEC2FullAcess Review and create Chúng ta đã tạo xong role cho AWS "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/",
+	"title": "Accounting",
+	"tags": [],
+	"description": "",
+	"content": "Phụ lục\nMFA-Alias User and Group Role and Policy Budgets "
 },
 {
 	"uri": "//localhost:1313/categories/",
