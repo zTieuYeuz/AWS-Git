@@ -7,5 +7,5 @@ pre : " <b> 7.3 </b> "
 ---
 
 Phụ lục
-1. 
-2. 
+1. Role AWS
+2. Policy AWS

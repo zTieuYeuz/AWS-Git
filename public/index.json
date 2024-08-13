@@ -186,7 +186,14 @@
 	"title": "AccessKey and reset password",
 	"tags": [],
 	"description": "",
-	"content": " Đăng nhập vào console AWS IAM\\ Video hướng dẫn \\ "
+	"content": " Đăng nhập vào console AWS IAM\nVideo hướng dẫn\nAccessKey and reset password\n"
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/",
+	"title": "Accounting",
+	"tags": [],
+	"description": "",
+	"content": "Phụ lục\nMFA Budgets "
 },
 {
 	"uri": "//localhost:1313/7-taikhoan/7.1-mfa-alias/7.1.2-alias/",
@@ -238,11 +245,18 @@
 	"content": "Phụ lục\nMFA Alias "
 },
 {
-	"uri": "//localhost:1313/7-taikhoan/",
-	"title": "Tài khoản",
+	"uri": "//localhost:1313/7-taikhoan/7.3-role-and-policy/",
+	"title": "Role and Policy",
 	"tags": [],
 	"description": "",
-	"content": "Phụ lục\nMFA Budgets "
+	"content": "Phụ lục\nRole AWS Policy AWS "
+},
+{
+	"uri": "//localhost:1313/7-taikhoan/7.3-role-and-policy/7.3.1-role/",
+	"title": "Role AWS",
+	"tags": [],
+	"description": "",
+	"content": " Đăng nhập vào console AWS IAM Click chọn Role Click \u0026ldquo;create role\u0026rdquo; "
 },
 {
 	"uri": "//localhost:1313/categories/",
