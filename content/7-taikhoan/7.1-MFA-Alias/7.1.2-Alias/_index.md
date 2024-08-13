@@ -1,7 +1,7 @@
 ---
 title : "Alias"
 date : "`r Sys.Date()`"
-weight : 6
+weight : 2
 chapter : false
 pre : " <b> 7.1.2 </b> "
 ---

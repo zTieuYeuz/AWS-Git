@@ -1,7 +1,7 @@
 ---
 title : "Create User"
 date : "`r Sys.Date()`"
-weight : 6
+weight : 1
 chapter : false
 pre : " <b> 7.2.1 </b> "
 ---

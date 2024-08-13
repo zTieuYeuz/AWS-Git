@@ -1,7 +1,7 @@
 ---
 title : "MFA"
 date : "`r Sys.Date()`"
-weight : 6
+weight : 1
 chapter : false
 pre : " <b> 7.1.1 </b> "
 ---
