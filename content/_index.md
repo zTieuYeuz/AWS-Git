@@ -14,9 +14,5 @@ chapter : false
 
 ### Content
  1. [Introduction ](1-introduce/)
- 2. [Preparation](2-prerequiste/)
- 3. [Connect to EC2 instance](3-accessibilitytoinstances/)
- 4. [Manage session logs](4-s3log/)
- 5. [Port Forwarding](5-Portfwd/)
- 6. [Clean up resources](6-cleanup/)
- 7. [taikhoan](7-taikhoan/)
+ 2. [Accounting](2-Accounting/)
+ 3. [VPN Site to Site AWS](/3-VPN%20Site%20to%20Site%20on%20premises/)
