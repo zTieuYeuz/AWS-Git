@@ -23,4 +23,6 @@ pre : " <b> 3.7.1 </b> "
 	+ Chọn VPC ASG.
 	+ Chọn Attach to VPC
 Chèn hình
+5.	Hoàn tất và xem State là Attached
+## Chèn hình
 

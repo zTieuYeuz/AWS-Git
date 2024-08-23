@@ -21,12 +21,14 @@ Trong giao diện AWS Systems Manager.
 -	Chọn Session Manager
 -	Chọn tab Preferences
 -	Chọn Edit
-hình anh
+hình ảnh
 -	Trong Cloudwatch logging
 -	Chọn Enable
 -	Bỏ chọn Enforce encryption
 -	Chọn vpns2s/log
 -	Chọn Save
+hình ảnh
+
 
 
 

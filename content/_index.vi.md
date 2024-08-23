@@ -16,3 +16,5 @@ chapter : false
 
  1. [Giới thiệu](1-introduce/)
  2. [Accounting](7-taikhoan/)
+ 3. [VPN Site to Site AWS](/3-VPN%20Site%20to%20Site%20on%20premises/)
+ 4. [MinhThoai-chưaxong](/4-Chưa%20xong/)
