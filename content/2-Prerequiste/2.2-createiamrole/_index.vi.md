@@ -12,14 +12,14 @@ Trong bước này chúng ta sẽ tiến hành tạo IAM Role. Trong IAM Role n�
 
 1. Truy cập vào [giao diện quản trị dịch vụ IAM](https://console.aws.amazon.com/iamv2/)
 2. Ở thanh điều hướng bên trái, chọn  **Roles**. Chọn  **Create role**.
- 
-![role1](/static/images/2.prerequisite/039-iamrole.png)
+
+![role1](/images/2.prerequisite/039-iamrole.png)
 
 
 3. Click **AWS service** và click **EC2**. 
   + Click **Next: Permissions**.  
 
-![role1](../../../static/images/2.prerequisite/040-iamrole.png)
+![role1](/images/2.prerequisite/040-iamrole.png)
 
 4. Trong thanh tìm kiếm, 
   + Điền **AmazonSSMManagedInstanceCore** và ấn phím Enter để tìm kiếm policy này.
@@ -28,27 +28,26 @@ Trong bước này chúng ta sẽ tiến hành tạo IAM Role. Trong IAM Role n�
   + Chọn policy **CloudwatchLogsFullAccess**
   + Click **Next: Tags.**
 
-![addpolicy](../../../static/images/2.prerequisite/041-iamrole.png)
-![addpolicy](../../../static/images/2.prerequisite/042-iamrole.png)
+![addpolicy](/images/2.prerequisite/041-iamrole.png)
+![addpolicy](/images/2.prerequisite/042-iamrole.png)
 
 5. Click **Next: Review**.
 6. Đặt tên cho Role là **SSM-Role** ở Role Name  
-  + Click **Create Role** \.
+  + Click **Create Role**
 
-![NameRole](../../../static/images/2.prerequisite/043-iamrole.png)
+![NameRole](/images/2.prerequisite/043-iamrole.png)
 
 7. Tiếp theo chúng ta sẽ gán role này vào các ec2 public và private. Truy cập vào [giao diện quản trị dịch vụ máy chủ ảo](https://ap-southeast-1.console.aws.amazon.com/ec2).
-   + Click **Instances**
-   + Check **EC2_Private**
-   + Click **Action** -> Click **Security**
-   + Click **Change security groups**
+  + Click **Instances**
+  + Check **EC2_Private**
+  + Click **Action** -> Click **Security**
+  + Click **Change security groups**
 
-![Attachrole](../../../static/images/2.prerequisite/044-iamrole.png)
+![Attachrole](/images/2.prerequisite/044-iamrole.png)
 
 8. Chọn **SSM-Role** vừa tạo.
    + Click **Update IAM **role**
 
-![Attachrole](/static/images/2.prerequisite/045-iamrole.png)
+![Attachrole](/images/2.prerequisite/045-iamrole.png)
 
-9. Làm tương tự với ec2-public
-![alt text](../../../static/images/2.prerequisite/013-creatertb.png)
+9. Tương tự lập lại bước 7-8 cho EC2_Public
