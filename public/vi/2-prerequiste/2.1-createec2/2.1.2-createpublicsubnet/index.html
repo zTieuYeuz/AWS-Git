@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo Public subnet :: AWS System Manager</title>
+    <title>Tạo Public subnet :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724600136" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724600136" rel="stylesheet">
-    <link href="/css/hybrid.css?1724600136" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724600136" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724600136" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724600136" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724600136" rel="stylesheet">
-    <link href="/css/theme.css?1724600136" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724600136" rel="stylesheet">
+    <link href="/css/nucleus.css?1724757321" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724757321" rel="stylesheet">
+    <link href="/css/hybrid.css?1724757321" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724757321" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724757321" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724757321" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724757321" rel="stylesheet">
+    <link href="/css/theme.css?1724757321" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724757321" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724600136" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724757321" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724600136"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724757321"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724600136"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724600136"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724757321"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724757321"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724600136"></script>
+<script type="text/javascript" src="/js/search.js?1724757321"></script>
 
     
   </div>
@@ -282,41 +282,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo EC2 ở Private Subnet và Public Subnet" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Tạo Public Linux EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
-           <b> 2.1.6 </b> Tạo Private Windows EC2
+           <b> 2.1.5 </b> Tạo EC2 ở Private Subnet và Public Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -375,13 +347,41 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/2.3.1-role/" title="CloudWatch Logs" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/" title="CloudWatch Logs" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.3-createloggroup/2.3.1-role/">
+      <a href="/vi/2-prerequiste/2.3-createloggroup/">
            <b> 2.3 </b> CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-enablelogssm/" title="Quản lý session logs với CloudWatch Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-enablelogssm/">
+           <b> 2.4 </b> Quản lý session logs với CloudWatch Logs
           
             <i class="fas fa-check read-icon"></i>
           
@@ -396,6 +396,58 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-vpnsitetositeaws/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-vpnsitetositeaws/">
+           <b> 3. </b> Cấu hình Site to Site VPN trên AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/" title="Cấu hình VPN Site to Site Trên Fortigate" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-vpnsitetositefortigate/">
+           <b> 4 </b> Cấu hình VPN Site to Site Trên Fortigate
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -547,7 +599,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > <a href='/vi/2-prerequiste/2.1-createec2/'>Chuẩn bị VPC và EC2</a> > Tạo Public subnet
+            <a href='/vi/'>VPN Site To Site</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > <a href='/vi/2-prerequiste/2.1-createec2/'>Chuẩn bị VPC và EC2</a> > Tạo Public subnet
           
         
           
@@ -658,13 +710,13 @@
 <li>Tại trang <strong>Attach to VPC</strong>.</li>
 </ol>
 <ul>
-<li>Tại mục <strong>Available VPCs</strong> chọn <strong>Lab VPC</strong>.</li>
+<li>Tại mục <strong>Available VPCs</strong> chọn <strong>ASG</strong>.</li>
 <li>Click <strong>Attach internet gateway</strong>.</li>
 <li>Kiểm tra quá trình attach thành công như hình dưới.</li>
 </ul>
 <p><img alt="VPC" src="/images/2.prerequisite/010-createigw.png"></p>
 <ol start="10">
-<li>Tiếp theo chúng ta sẽ tạo một custom route table để gán vào <strong>Lab Public Subnet</strong>.</li>
+<li>Tiếp theo chúng ta sẽ tạo một custom route table để gán vào <strong>Public Subnet</strong>.</li>
 </ol>
 <ul>
 <li>Click <strong>Route Tables</strong>.</li>
@@ -675,9 +727,10 @@
 <li>Tại trang <strong>Create route table</strong>.</li>
 </ol>
 <ul>
-<li>Tại mục <strong>Name</strong>, điền <strong>Lab Publicrtb</strong>.</li>
-<li>Tại mục <strong>VPC</strong>, chọn <strong>Lab VPC</strong>.</li>
-<li>Click <strong>Create route table</strong>.</li>
+<li>Tại mục <strong>Name</strong>, điền <strong>Route Table Public</strong>.</li>
+<li>Tại mục <strong>VPC</strong>, chọn <strong>ASG</strong>.</li>
+<li>Click <strong>Create route table</strong>.
+<img alt="VPC" src="/images/2.prerequisite/011-creatertbpublic.png"></li>
 </ul>
 <ol start="12">
 <li>Sau khi tạo route table thành công.</li>
@@ -692,7 +745,7 @@
 <ul>
 <li>Click <strong>Add route</strong>.</li>
 <li>Tại mục <strong>Destination</strong> điền 0.0.0.0/0</li>
-<li>Tại mục <strong>Target</strong> chọn <strong>Internet Gateway</strong> sau đó chọn <strong>Lab IGW</strong>.</li>
+<li>Tại mục <strong>Target</strong> chọn <strong>Internet Gateway</strong> sau đó chọn <strong>Lab IGW</strong> đã tạo trước đó</li>
 <li>Click <strong>Save changes</strong>.</li>
 </ul>
 <p><img alt="VPC" src="/images/2.prerequisite/013-creatertb.png"></p>
@@ -712,7 +765,7 @@
 </ul>
 <p><img alt="VPC" src="/images/2.prerequisite/015-creatertb.png"></p>
 <ol start="16">
-<li>Kiểm tra thông tin route table đã được associate với <strong>Lab Public Subnet</strong> và thông tin route đi internet đã được trỏ đến Internet Gateway như hình dưới.</li>
+<li>Kiểm tra thông tin route table đã được associate với <strong>Lab Public Subnet</strong> và thông tin route đi internet đã được trỏ đến <strong>.Internet Gateway</strong>. như hình dưới.</li>
 </ol>
 <p><img alt="VPC" src="/images/2.prerequisite/016-creatertb.png"></p>
 
@@ -888,6 +941,41 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -935,9 +1023,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -964,19 +1049,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724600136"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724600136"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724600136"></script>
-    <script src="/js/jquery.sticky.js?1724600136"></script>
-    <script src="/js/featherlight.min.js?1724600136"></script>
-    <script src="/js/highlight.pack.js?1724600136"></script>
+    <script src="/js/clipboard.min.js?1724757321"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724757321"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724757321"></script>
+    <script src="/js/jquery.sticky.js?1724757321"></script>
+    <script src="/js/featherlight.min.js?1724757321"></script>
+    <script src="/js/highlight.pack.js?1724757321"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724600136"></script>
-    <script src="/js/learn.js?1724600136"></script>
-    <script src="/js/hugo-learn.js?1724600136"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724757321"></script>
+    <script src="/js/learn.js?1724757321"></script>
+    <script src="/js/hugo-learn.js?1724757321"></script>
 
-    <link href="/mermaid/mermaid.css?1724600136" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724600136"></script>
+    <link href="/mermaid/mermaid.css?1724757321" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724757321"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

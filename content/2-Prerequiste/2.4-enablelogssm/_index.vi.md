@@ -3,7 +3,7 @@ title : "Quản lý session logs với CloudWatch Logs"
 date :  "`r Sys.Date()`" 
 weight : 3 
 chapter : false
-pre : " <b> 2.3 </b> "
+pre : " <b> 2.4 </b> "
 ---
 
 

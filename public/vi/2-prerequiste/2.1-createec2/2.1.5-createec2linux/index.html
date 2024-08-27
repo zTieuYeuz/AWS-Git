@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo Public Linux EC2 :: AWS System Manager</title>
+    <title>Tạo EC2 ở Private Subnet và Public Subnet :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724600136" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724600136" rel="stylesheet">
-    <link href="/css/hybrid.css?1724600136" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724600136" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724600136" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724600136" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724600136" rel="stylesheet">
-    <link href="/css/theme.css?1724600136" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724600136" rel="stylesheet">
+    <link href="/css/nucleus.css?1724757321" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724757321" rel="stylesheet">
+    <link href="/css/hybrid.css?1724757321" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724757321" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724757321" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724757321" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724757321" rel="stylesheet">
+    <link href="/css/theme.css?1724757321" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724757321" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724600136" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724757321" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724600136"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724757321"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724600136"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724600136"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724757321"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724757321"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724600136"></script>
+<script type="text/javascript" src="/js/search.js?1724757321"></script>
 
     
   </div>
@@ -282,41 +282,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo EC2 ở Private Subnet và Public Subnet" class="dd-item 
         
         active
         
         ">
       <a href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Tạo Public Linux EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
-           <b> 2.1.6 </b> Tạo Private Windows EC2
+           <b> 2.1.5 </b> Tạo EC2 ở Private Subnet và Public Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -375,13 +347,41 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/2.3.1-role/" title="CloudWatch Logs" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/" title="CloudWatch Logs" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.3-createloggroup/2.3.1-role/">
+      <a href="/vi/2-prerequiste/2.3-createloggroup/">
            <b> 2.3 </b> CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-enablelogssm/" title="Quản lý session logs với CloudWatch Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-enablelogssm/">
+           <b> 2.4 </b> Quản lý session logs với CloudWatch Logs
           
             <i class="fas fa-check read-icon"></i>
           
@@ -396,6 +396,58 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-vpnsitetositeaws/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-vpnsitetositeaws/">
+           <b> 3. </b> Cấu hình Site to Site VPN trên AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/" title="Cấu hình VPN Site to Site Trên Fortigate" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-vpnsitetositefortigate/">
+           <b> 4 </b> Cấu hình VPN Site to Site Trên Fortigate
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -547,7 +599,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > <a href='/vi/2-prerequiste/2.1-createec2/'>Chuẩn bị VPC và EC2</a> > Tạo Public Linux EC2
+            <a href='/vi/'>VPN Site To Site</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > <a href='/vi/2-prerequiste/2.1-createec2/'>Chuẩn bị VPC và EC2</a> > Tạo EC2 ở Private Subnet và Public Subnet
           
         
           
@@ -578,7 +630,7 @@
           
             <h1>
               
-              Tạo Public Linux EC2
+              Tạo EC2 ở Private Subnet và Public Subnet
             </h1>
           
 
@@ -602,73 +654,38 @@
 </ul>
 <p><img alt="EC2" src="/images/2.prerequisite/028-createec2.png"></p>
 <ol start="3">
-<li>Tại trang <strong>Step 2: Choose an Instance Type</strong>.</li>
+<li>Kéo xuống dưới phần:</li>
 </ol>
 <ul>
 <li>Click chọn Instance type <strong>t2.micro</strong>.</li>
-<li>Click <strong>Next: Configure Instance Details</strong>.</li>
+<li>Tại mục <strong>Network</strong> chọn <strong>ASG</strong>.</li>
+<li>Tại mục <strong>Subnet</strong> chọn <strong>Public Subnet 1</strong></li>
+<li>Tại mục <strong>Auto-assign Public IP</strong> chọn <strong>Enable</strong></li>
+<li>Chọn <strong>Select an existing security group</strong></li>
+<li>Chọn security group <strong>public_security_group</strong>.</li>
 </ul>
-<p><img alt="EC2" src="/images/2.prerequisite/029-createec2.png"></p>
+<p><img alt="EC2" src="/images/2.prerequisite/029-createec2.png">
+<img alt="EC2" src="/images/2.prerequisite/030-createec2.png"></p>
 <ol start="4">
-<li>Tại trang <strong>Step 3: Configure Instance Details</strong></li>
+<li>Tại Phần <strong>Advanced Details</strong>.</li>
 </ol>
 <ul>
-<li>Tại mục <strong>Network</strong> chọn <strong>Lab VPC</strong>.</li>
-<li>Tại mục <strong>Subnet</strong> chọn <strong>Lab Public Subnet</strong>.</li>
-<li>Tại mục <strong>Auto-assign Public IP</strong> chọn <strong>Use subnet setting (Enable)</strong></li>
-<li>Click <strong>Next: Add Storage</strong>.</li>
-</ul>
-<p><img alt="EC2" src="/images/2.prerequisite/030-createec2.png"></p>
-<ol start="5">
-<li>Click <strong>Next: Add Tags</strong> để chuyển sang bước kế tiếp.</li>
-</ol>
-<ul>
-<li>Click <strong>Next: Configure Security Group</strong> để chuyển sang bước kế tiếp.</li>
-</ul>
-<ol start="6">
-<li>Tại trang <strong>Step 6: Configure Security Group</strong>.</li>
-</ol>
-<ul>
-<li>Chọn <strong>Select an existing security group</strong>.</li>
-<li>Chọn security group <strong>SG Public Linux Instance</strong>.</li>
-<li>Click <strong>Review and Launch</strong>.</li>
+<li>Mục <strong>IAM instance profile</strong> chọn <strong>SSM-Role</strong></li>
+<li>Chọn <strong>Lauch instance</strong></li>
 </ul>
 <p><img alt="EC2" src="/images/2.prerequisite/031-createec2.png"></p>
-<ol start="7">
-<li>
-<p>Hộp thoại cảnh báo hiện lên vì chúng ta không cấu hình tường lửa cho phép kết nối vào port 22, Click <strong>Continue</strong> để tiếp tục.</p>
-</li>
-<li>
-<p>Tại trang <strong>Step 7: Review Instance Launch</strong>.</p>
+<ol start="5">
+<li>Lập lại tương tự từ bước 2-4. Tạo 1 EC2. Nhưng lưu ý 1 vài điểm
+<ul>
+<li>Tại mục <strong>Subnet</strong> chọn <strong>Private Subnet 2</strong></li>
+<li>Tại mục <strong>Auto-assign Public IP</strong> chọn <strong>Disable</strong></li>
+<li>Chọn security group <strong>private_security_group</strong></li>
+<li>Còn lại làm như bước 2-4</li>
+<li>Sau khi tạo xong ta có kết quả
+<img alt="VPC" src="/images/2.prerequisite/034-createec2.png"></li>
+</ul>
 </li>
 </ol>
-<ul>
-<li>Click <strong>Launch</strong>.</li>
-</ul>
-<ol start="9">
-<li>Tại hộp thoại <strong>Select an existing key pair or create a new key pair</strong>.</li>
-</ol>
-<ul>
-<li>Click chọn <strong>Create a new key pair</strong>.</li>
-<li>Tại mục <strong>Key pair name</strong> điền <strong>LabKeypair</strong>.</li>
-<li>Click <strong>Download Key Pair</strong> và lưu xuống máy tính của bạn.</li>
-<li>Click <strong>Launch Instances</strong> để tạo máy chủ EC2.</li>
-</ul>
-<p><img alt="EC2" src="/images/2.prerequisite/032-createec2.png"></p>
-<ol start="10">
-<li>
-<p>Click <strong>View Instances</strong> để quay lại danh mục EC2 instances.</p>
-</li>
-<li>
-<p>Click vào biểu tượng edit dưới cột <strong>Name</strong>.</p>
-</li>
-</ol>
-<ul>
-<li>Tại hộp thoại <strong>Edit Name</strong> điền <strong>Public Linux Instance</strong>.</li>
-<li>Click <strong>Save</strong>.</li>
-</ul>
-<p><img alt="EC2" src="/images/2.prerequisite/033-createec2.png"></p>
-<p>Tiếp theo chúng ta sẽ thực hiện tương tự để tạo 1 EC2 Instance Windows chạy trong Private subnet.</p>
 
 
 
@@ -839,6 +856,9 @@
             
         
                     
+            
+        
+                    
                         
             
             
@@ -846,6 +866,38 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -889,9 +941,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -908,7 +957,7 @@
 			<a class="nav nav-prev" href="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Tạo các security group"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -918,19 +967,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724600136"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724600136"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724600136"></script>
-    <script src="/js/jquery.sticky.js?1724600136"></script>
-    <script src="/js/featherlight.min.js?1724600136"></script>
-    <script src="/js/highlight.pack.js?1724600136"></script>
+    <script src="/js/clipboard.min.js?1724757321"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724757321"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724757321"></script>
+    <script src="/js/jquery.sticky.js?1724757321"></script>
+    <script src="/js/featherlight.min.js?1724757321"></script>
+    <script src="/js/highlight.pack.js?1724757321"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724600136"></script>
-    <script src="/js/learn.js?1724600136"></script>
-    <script src="/js/hugo-learn.js?1724600136"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724757321"></script>
+    <script src="/js/learn.js?1724757321"></script>
+    <script src="/js/hugo-learn.js?1724757321"></script>
 
-    <link href="/mermaid/mermaid.css?1724600136" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724600136"></script>
+    <link href="/mermaid/mermaid.css?1724757321" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724757321"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

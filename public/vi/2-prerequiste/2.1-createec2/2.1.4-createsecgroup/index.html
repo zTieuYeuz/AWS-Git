@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo các security group :: AWS System Manager</title>
+    <title>Tạo các security group :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724600136" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724600136" rel="stylesheet">
-    <link href="/css/hybrid.css?1724600136" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724600136" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724600136" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724600136" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724600136" rel="stylesheet">
-    <link href="/css/theme.css?1724600136" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724600136" rel="stylesheet">
+    <link href="/css/nucleus.css?1724757321" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724757321" rel="stylesheet">
+    <link href="/css/hybrid.css?1724757321" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724757321" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724757321" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724757321" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724757321" rel="stylesheet">
+    <link href="/css/theme.css?1724757321" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724757321" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724600136" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724757321" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724600136"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724757321"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724600136"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724600136"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724757321"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724757321"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724600136"></script>
+<script type="text/javascript" src="/js/search.js?1724757321"></script>
 
     
   </div>
@@ -282,41 +282,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo EC2 ở Private Subnet và Public Subnet" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Tạo Public Linux EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
-           <b> 2.1.6 </b> Tạo Private Windows EC2
+           <b> 2.1.5 </b> Tạo EC2 ở Private Subnet và Public Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -375,13 +347,41 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/2.3.1-role/" title="CloudWatch Logs" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/" title="CloudWatch Logs" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.3-createloggroup/2.3.1-role/">
+      <a href="/vi/2-prerequiste/2.3-createloggroup/">
            <b> 2.3 </b> CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.4-enablelogssm/" title="Quản lý session logs với CloudWatch Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.4-enablelogssm/">
+           <b> 2.4 </b> Quản lý session logs với CloudWatch Logs
           
             <i class="fas fa-check read-icon"></i>
           
@@ -396,6 +396,58 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-vpnsitetositeaws/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-vpnsitetositeaws/">
+           <b> 3. </b> Cấu hình Site to Site VPN trên AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/" title="Cấu hình VPN Site to Site Trên Fortigate" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-vpnsitetositefortigate/">
+           <b> 4 </b> Cấu hình VPN Site to Site Trên Fortigate
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -547,7 +599,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > <a href='/vi/2-prerequiste/2.1-createec2/'>Chuẩn bị VPC và EC2</a> > Tạo các security group
+            <a href='/vi/'>VPN Site To Site</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > <a href='/vi/2-prerequiste/2.1-createec2/'>Chuẩn bị VPC và EC2</a> > Tạo các security group
           
         
           
@@ -595,7 +647,7 @@
 
 
 	<h4 id="tao-các-security-group">Tạo các security group</h4>
-<p>Trong bước này chúng ta sẽ tiến hành tạo các security group được sử dụng cho các instance của chúng ta. Các bạn có thể thấy, các securiy group này sẽ không cần phải mở các port truyền thống để <strong>ssh</strong> như port <strong>22</strong> hoặc <strong>remote desktop</strong> thông qua port <strong>3389</strong>.</p>
+<p>Trong bước này chúng ta sẽ tiến hành tạo các security group được sử dụng cho các instance của chúng ta.</p>
 <h4 id="tạo-security-group-cho-linux-instance-nằm-trong-public-subnet">Tạo security group cho Linux instance nằm trong public subnet</h4>
 <ol>
 <li>Truy cập <a href="https://console.aws.amazon.com/vpc">giao diện quản trị dịch vụ VPC</a></li>
@@ -606,11 +658,12 @@
 </ul>
 <p><img alt="SG" src="/images/2.prerequisite/019-createsg.png"></p>
 <ol start="3">
-<li>Tại mục <strong>Security group name</strong>, điền <strong>SG Public Linux Instance</strong>.</li>
+<li>Tại mục <strong>Security group name</strong>, điền <strong>private_security_group</strong>.</li>
 </ol>
 <ul>
-<li>Tại mục <strong>Description</strong>, điền <strong>SG Public Linux Instance</strong>.</li>
-<li>Tại mục <strong>VPC</strong>, click dấu <strong>X</strong> để chọn lại <strong>Lab VPC</strong> bạn đã tạo cho bài lab này.</li>
+<li>Tại mục <strong>Description</strong>, điền <strong>SG Public for EC2 Public</strong>.</li>
+<li>Tại mục <strong>VPC</strong>, chọn lại <strong>VPC ASG</strong> bạn đã tạo cho bài lab này.</li>
+<li>Trong <strong>Inbound rule</strong> ta add 2 rule <strong>SSH</strong> và <strong>All ICMP - IPV4</strong></li>
 </ul>
 <p><img alt="SG" src="/images/2.prerequisite/020-createsg.png"></p>
 <ol start="4">
@@ -623,7 +676,7 @@
 <div class="notices tip" ><p>Các bạn có thể thấy, security group chúng ta tạo sử dụng cho Linux public instance sẽ không cần phải mở các port truyền thống để <strong>ssh</strong> như port <strong>22</strong>.</p>
 </div>
 
-<h4 id="tạo-security-group-cho-windows-instance-nằm-trong-private-subnet">Tạo security group cho Windows instance nằm trong private subnet</h4>
+<h4 id="tạo-security-group-cho-ec2-instance-nằm-trong-private-subnet">Tạo security group cho EC2 instance nằm trong private subnet</h4>
 <ol>
 <li>Sau khi tạo thành công security group cho Linux instance nằm trong public subnet, click vào link Security Groups để quay trở lại danh sách Security groups.</li>
 </ol>
@@ -633,53 +686,27 @@
 <p>Click <strong>Create security group</strong>.</p>
 </li>
 <li>
-<p>Tại mục <strong>Security group name</strong>, điền <strong>SG Private Windows Instance</strong>.</p>
+<p>Tại mục <strong>Security group name</strong>, điền <strong>Public_security_group</strong>.</p>
 </li>
 </ol>
 <ul>
-<li>Tại mục <strong>Description</strong>, điền <strong>SG Private Windows Instance</strong>.</li>
-<li>Tại mục <strong>VPC</strong>, click dấu <strong>X</strong> để chọn lại <strong>Lab VPC</strong> bạn đã tạo cho bài lab này.</li>
+<li>Tại mục <strong>Description</strong>, điền <strong>SG for EC2 Private</strong>.</li>
+<li>Tại mục <strong>VPC</strong>, chọn <strong>ASG</strong> bạn đã tạo cho bài lab này.</li>
 </ul>
 <p><img alt="SG" src="/images/2.prerequisite/022-createsg.png"></p>
 <ol start="4">
-<li>Kéo chuột xuống phía dưới.</li>
+<li>Trong <strong>Inbound rule</strong> ta add 1  <strong>All ICMP - IPV4</strong>. Rule này cho phép ping của EC2 nằm trong private subnet</li>
+<li>Giữ nguyên <strong>Outbound rule</strong>, kéo chuột xuống phía dưới.</li>
 </ol>
 <ul>
-<li>Thêm <strong>Outbound rule</strong> cho phép kết nối TCP 443 tới 10.10.0.0/16 ( CIDR của <strong>Lab VPC</strong> chúng ta đã tạo)</li>
 <li>Click <strong>Create security group</strong>.</li>
 </ul>
 <p><img alt="SG" src="/images/2.prerequisite/023-createsg.png"></p>
 
-<div class="notices tip" ><p>Đối với Instance trong private subnet, chúng ta sẽ kết nối tới endpoint của <strong>Session Manager</strong> qua kết nối đã được mã hóa TLS. vì thế chúng ta cần cho phép kết nối chiều ra từ instance của mình tới VPC CIDR thông qua port 443.</p>
+<div class="notices tip" ><p>Đối với Instance trong private subnet, chúng ta sẽ dùng  <strong>Session Manager</strong> qua kết nối đã được mã hóa TLS. Vì vậy chúng ta có thể kết nối đến thông qua nat gateway
+Để có thể tối ưu hóa chi phí hơn thì bạn có thể dùng endpoint của <strong>Session Manager</strong> thay vì đi ra internet bằng nat gateway. Ở đây bài của mình sẽ forcus nhiều VPN nên nếu các bạn triển khai endpoint thì tham khảo lab <a href="https://000058.awsstudygroup.com/vi/">Làm việc với Amazon System Manager - Session Manager</a></p>
 </div>
 
-<h4 id="tạo-security-group-cho-vpc-endpoint">Tạo security group cho VPC Endpoint</h4>
-<ol>
-<li>Trong bước này, chúng ta sẽ tạo security group cho VPC Endpoint của <strong>Session Manager</strong>.</li>
-<li>Sau khi tạo thành công security group cho Windows instance trong private subnet, click vào link Security Groups để quay trở lại danh sách Security groups.</li>
-<li>Click <strong>Create security group</strong>.</li>
-<li>Tại mục <strong>Security group name</strong>, điền <strong>SG VPC Endpoint</strong>.</li>
-</ol>
-<ul>
-<li>Tại mục <strong>Description</strong>, điền <strong>SG VPC Endpoint</strong>.</li>
-<li>Tại mục <strong>VPC</strong>, click dấu <strong>X</strong> để chọn lại <strong>Lab VPC</strong> bạn đã tạo cho bài lab này.</li>
-</ul>
-<p><img alt="SG" src="/images/2.prerequisite/024-createsg.png"></p>
-<ol start="5">
-<li>Kéo chuột xuống phía dưới.</li>
-</ol>
-<ul>
-<li>Xóa <strong>Outbound rule</strong>.</li>
-</ul>
-<p><img alt="SG" src="/images/2.prerequisite/025-createsg.png"></p>
-<ol start="6">
-<li>Thêm <strong>Inbound rule</strong> cho phép TCP 443 đến từ 10.10.0.0/16 ( CIDR của <strong>Lab VPC</strong> chúng ta đã tạo ).</li>
-</ol>
-<ul>
-<li>Click <strong>Create security group</strong>.</li>
-</ul>
-<p><img alt="SG" src="/images/2.prerequisite/026-createsg.png"></p>
-<p>Như vậy chúng ta đã tiến hành xong việc tạo các security group cần thiết cho các EC2 instance và VPC Endpoint.</p>
 
 
 
@@ -853,6 +880,41 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -900,9 +962,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -919,7 +978,7 @@
 			<a class="nav nav-prev" href="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Tạo Private subnet"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo EC2 ở Private Subnet và Public Subnet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -929,19 +988,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724600136"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724600136"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724600136"></script>
-    <script src="/js/jquery.sticky.js?1724600136"></script>
-    <script src="/js/featherlight.min.js?1724600136"></script>
-    <script src="/js/highlight.pack.js?1724600136"></script>
+    <script src="/js/clipboard.min.js?1724757321"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724757321"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724757321"></script>
+    <script src="/js/jquery.sticky.js?1724757321"></script>
+    <script src="/js/featherlight.min.js?1724757321"></script>
+    <script src="/js/highlight.pack.js?1724757321"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724600136"></script>
-    <script src="/js/learn.js?1724600136"></script>
-    <script src="/js/hugo-learn.js?1724600136"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724757321"></script>
+    <script src="/js/learn.js?1724757321"></script>
+    <script src="/js/hugo-learn.js?1724757321"></script>
 
-    <link href="/mermaid/mermaid.css?1724600136" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724600136"></script>
+    <link href="/mermaid/mermaid.css?1724757321" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724757321"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
