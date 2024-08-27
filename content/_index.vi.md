@@ -16,6 +16,6 @@ chapter : false
 
  1. [Giới thiệu](1-introduce/)
  2. [Các bước chuẩn bị](2-Prerequiste/)
- 3. [VPN Site to Site AWS](/3-ConfigVPNOnAWS/)
- 4. [Cấu Hình VPN Site to Site on Fortigate](/4-ConfigVPNOnFortigate/)
+ 3. [VPN Site to Site AWS](/3-vpnsitetositeaws/)
+ 4. [Cấu Hình VPN Site to Site on Fortigate](4-vpnsitetositefortigate/)
  5. [Dọn dẹp tài nguyên](/5-Cleanup/)
