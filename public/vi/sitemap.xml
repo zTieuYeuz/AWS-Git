@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-createec2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.2-createec2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createec2/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -12,6 +24,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1-introduce/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.1-createvpc/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.2-createec2/2.2.1-createvpc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.1-createvpc/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/</loc>
@@ -26,16 +50,100 @@
                 href="//localhost:1313/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-accounting/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-accounting/"
+                href="//localhost:1313/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-accounting/"
+                href="//localhost:1313/vi/2-prerequiste/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-createiamrole/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.2-createiamrole/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createiamrole/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.2-createpublicsubnet/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.2-createec2/2.2.2-createpublicsubnet/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.2-createpublicsubnet/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.3-createloggroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.3-createloggroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.3-createloggroup/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.4-enablelogssm/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.4-enablelogssm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.4-enablelogssm/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.3-createprivatesubnet/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.2-createec2/2.2.3-createprivatesubnet/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.3-createprivatesubnet/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.4-createsecgroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.2-createec2/2.2.4-createsecgroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.4-createsecgroup/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.5-createec2linux/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.2-createec2/2.2.5-createec2linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createec2/2.2.5-createec2linux/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
