@@ -1,5 +1,19 @@
 [
 {
+	"uri": "//localhost:1313/2-prerequiste/2.2-createec2/_index.vi2/",
+	"title": "Chuẩn bị VPC và EC2",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 2 EC2 Instance Linux nằm trong public subnet và private subnet.\nTổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:\nNội dung Tạo VPC Tạo Public subnet Tạo Private subnet Tạo security group Tạo 2 máy chủ Linux ở 2 subnet khác nhau "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.2-createec2/2.2.1-createvpc/",
+	"title": "Create VPC",
+	"tags": [],
+	"description": "",
+	"content": "Create VPC Lab VPC Go to VPC service management console Click Your VPC. Click Create VPC. At the Create VPC page. In the Name tag field, enter Lab VPC. In the IPv4 CIDR field, enter: 10.10.0.0/16. Click Create VPC. "
+},
+{
 	"uri": "//localhost:1313/1-introduce/",
 	"title": "Introduction",
 	"tags": [],
@@ -14,25 +28,11 @@
 	"content": "1.Introduce AWS Site-to-Site VPN là một dịch vụ giúp kết nối an toàn các mạng on-premises với đám mây AWS qua mạng internet. AWS Site-to-Site VPN cho phép xây dựng một kết nối VPN được mã hóa giữa mạng của on-premises và AWS, hỗ trợ các tiêu chuẩn bảo mật cao cấp, đảm bảo bảo mật nghiêm ngặt và duy trì kết nối ổn định với hệ thống mạng của bạn. Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những lợi ích sau:\nĐảm bảo bảo mật cao với mã hóa dữ liệu trong suốt quá trình truyền. Tích hợp dễ dàng với các dịch vụ AWS khác như EC2, VPC, và S3,Cloudwatch.. Quản lý tập trung và đơn giản hóa việc kết nối với nhiều chi nhánh khác nhau. Hỗ trợ các giao thức VPN phổ biến như IPsec và BGP để tối ưu hóa việc định tuyến. AWS Site-to-Site VPN giúp tiết kiệm thời gian và chi phí, đồng thời đơn giản hóa việc triển khai và duy trì kết nối an toàn giữa on-premises với AWS. Với những ưu điểm trên, bạn cũng có thể sử dụng VPN thay vì sử dụng Direct Connect nó giúp chúng ta tiết kiệm được chi phí khi đường truyền.\n"
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.1-createvpc_ec2/2.1.1-mfa/",
-	"title": "MFA",
+	"uri": "//localhost:1313/2-prerequiste/2.2-createec2/",
+	"title": "Preparing VPC and EC2",
 	"tags": [],
 	"description": "",
-	"content": "MFA Cho AWS Đăng nhập vào console AWS IAM click vào IAM Click vào MFA trong dashboard Điền thông tin của MFA cho tài khoản Điền divice name và chọn authenticator app Show mã QR Tải app cho MFA Googgle authenticator Microsoft authenticator authy Quét mã QR và điền mã điền 2 lần mã vào ô phía dưới Sau khi AWS đã xác nhận xong chúng ta quay về đăng nhập yêu cầu mã MFA Từ đây khi đăng nhập AWS ta đã được bảo vệ "
-},
-{
-	"uri": "//localhost:1313/2-prerequiste/2.1-createvpc_ec2/",
-	"title": "MFA-Alias",
-	"tags": [],
-	"description": "",
-	"content": "Phụ lục\nMFA Alias "
-},
-{
-	"uri": "//localhost:1313/",
-	"title": "Session Management",
-	"tags": [],
-	"description": "",
-	"content": "Work with Amazon System Manager - Session Manager Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Accounting VPN Site to Site AWS MinhThoai-chưaxong "
+	"content": "In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.\nThe architecture overview after you complete this step will be as follows:\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Create VPC Create Public Subnet Create Private Subnet Create security group Create public Linux server Create private Windows server "
 },
 {
 	"uri": "//localhost:1313/3-configvpnonaws/3.8-c%E1%BA%A5u-h%C3%ACnh-site-to-site-on-fortogate/3.8.1-t%E1%BA%A1o-tunnel-ipsec/",
@@ -49,6 +49,13 @@
 	"content": " Truy cập vào VPC Chọn Virtual Private Gateway Chọn Create Virtual Private Gateway chèn hình Trong giao diện Create Virtual Private Gateway Name tag, nhập VPN Gateway Chọn Amazon default ASN Chọn Create virtual private gateway chèn hình Chúng ta cần thực hiện Attach to VPC Chọn Actions Chọn Attach to VPC chèn hình Trong giao diện Attach to VPC Chọn VPC ASG. Chọn Attach to VPC Chèn hình Hoàn tất và xem State là Attached Chèn hình "
 },
 {
+	"uri": "//localhost:1313/",
+	"title": "VPN Site to Site Aws And Fortigate",
+	"tags": [],
+	"description": "",
+	"content": "Work with Amazon System Manager - Session Manager Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Accounting VPN Site to Site AWS MinhThoai-chưaxong "
+},
+{
 	"uri": "//localhost:1313/2-prerequiste/",
 	"title": "Accounting",
 	"tags": [],
@@ -56,11 +63,11 @@
 	"content": "Phụ lục\nMFA-Alias User and Group Role and Policy Budgets "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.1-createvpc_ec2/2.1.2-alias/",
-	"title": "Alias",
+	"uri": "//localhost:1313/2-prerequiste/2.2-createec2/2.2.2-createpublicsubnet/",
+	"title": "Create Public Subnet",
 	"tags": [],
 	"description": "",
-	"content": "Alias Cho tài khoản Đăng nhập vào console AWS IAM click vào IAM Click vào create Alias Điền Alias mình muốn hiển thị Ta thoát tài khoản và đăng nhập lại , ta đã có thể điền tên thay vì 1 dãy số "
+	"content": "Create Public Subnet Click Subnets. Click Create subnet. At the Create subnet page. In the VPC ID section, click Lab VPC. In the Subnet name field, enter Lab Public Subnet. In the Availability Zone section, select the first Availability zone. In the field IPv4 CIRD block enter 10.10.1.0/24. Scroll to the bottom of the page, click Create subnet.\nClick Lab Public Subnet.\nClick Actions. Click Edit subnet settings. Click Enable auto-assign public IPv4 address. Click Save. Click Internet Gateways. Click Create internet gateway. At the Create internet gateway page. In the Name tag field, enter Lab IGW. Click Create internet gateway. After successful creation, click Actions. Click Attach to VPC. At the Attach to VPC page. In the Available VPCs section, select Lab VPC. Click Attach internet gateway. Check the successful attaching process as shown below. Next we will create a custom route table to assign to Lab Public Subnet. Click Route Tables. Click Create route table. At the Create route table page. In the Name field, enter Lab Publicrtb. In the VPC section, select Lab VPC. Click Create route table. After creating the route table successfully. Click Edit routes. At the Edit routes page. Click Add route. In the Destination field, enter 0.0.0.0/0 In the Target section, select Internet Gateway and then select Lab IGW. Click Save changes. Click the Subnet associations tab. Click Edit subnet associations to proceed with the associate custom route table we just created in Lab Public Subnet. At the Edit subnet associations page. Click on Lab Public Subnet. Click Save associations. Check that the route table information has been associated with Lab Public Subnet and the internet route information has been pointed to the Internet Gateway as shown below. "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.2-createiamrole/",
@@ -98,6 +105,13 @@
 	"content": "Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 1 EC2 Instance Linux nằm trong public subnet, 1 nằm trong private subnet.\nTổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:\nChèn hình mỗi mục ở dưới\nTạo VPC\nTạo Public subnet Tạo Private subnet Tạo security group Tạo máy chủ Linux public và private "
 },
 {
+	"uri": "//localhost:1313/2-prerequiste/2.2-createec2/2.2.3-createprivatesubnet/",
+	"title": "Create Private Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Create Private Subnet Click Subnets. Click Create subnet. At the Create subnet page. In the VPC ID section, click Lab VPC. In the Subnet name field, enter Lab Private Subnet. In the Availability Zone section, select the first Availability zone. In the field IPv4 CIRD block enter 10.10.2.0/24. Scroll to the bottom of the page, click Create subnet. The next step is to create the necessary security groups for the lab.\n"
+},
+{
 	"uri": "//localhost:1313/3-configvpnonaws/3.7-c%E1%BA%A5u-h%C3%ACnh-site-to-site-tr%C3%AAn-aws/3.7.3-t%E1%BA%A1o-k%E1%BA%BFt-n%E1%BB%91i-vpn/",
 	"title": "Tạo kết nối VPN",
 	"tags": [],
@@ -119,6 +133,13 @@
 	"content": "Tạo IAM ROLE\nTrong bước này chúng ta sẽ tiến hành tạo 2 IAM Role. Trong IAM Role này sẽ được gán policy AmazonSSMManagedInstanceCore đây là policy cho phép máy chủ EC2 có thể giao tiếp với Session Manager.\\ chèn hinh ảnh mỗi cái xuống dòng là hình ảnh .\n1. Truy cập vào giao diện quản trị dịch vụ IAM\n2. Ở thanh điều hướng bên trái, click Roles.\n3. Click Create role.\n4. Click AWS service và click EC2.\n+ Click Next: Permissions. 5. Trong ô Search, điền AmazonSSMManagedInstanceCorevà ấn phím Enter để tìm kiếm policy này. + Click chọn policy AmazonSSMManagedInstanceCore.\n+ Click Next: Tags. 6. Click Next: Review. 7. Đặt tên cho Role là SSM-Role ở Role Name\n+ Click Create Role.\n8. Tiếp theo chúng ta sẽ thực hiện kết nối đến các máy chủ EC2 chúng ta đã tạo bằng Session Manager.\n9. SSM-Role này ta add them policy cho cloudwatch group:\n"
 },
 {
+	"uri": "//localhost:1313/2-prerequiste/2.2-createec2/2.2.4-createsecgroup/",
+	"title": "Create security groups",
+	"tags": [],
+	"description": "",
+	"content": "Create security groups In this step, we will proceed to create the security groups used for our instances. As you can see, these security groups will not need to open traditional ports to ssh like port 22 or remote desktop through port 3389.\nCreate security group for Linux instance located in public subnet Go to VPC service management console Click Security Group. Click Create security group. In the Security group name field, enter SG Public Linux Instance. In the Description section, enter SG Public Linux Instance. In the VPC section, click the X to reselect the Lab VPC you created for this lab. Keep Outbound rule, drag the mouse to the bottom. Click Create security group. As you can see, the security group we created to use for Linux public instances will not need to open traditional ports to ssh like port 22.\nCreate a security group for a Windows instance located in a private subnet After successfully creating a security group for the Linux instance located in the public subnet, click the Security Groups link to return to the Security groups list. Click Create security group.\nIn the Security group name field, enter SG Private Windows Instance.\nIn the Description section, enter SG Private Windows Instance. In the VPC section, click the X to reselect the Lab VPC you created for this lab. Scroll down. Add Outbound rule to allow TCP 443 connection to 10.10.0.0/16 ( CIDR of Lab VPC we created) Click Create security group. For the Instance in the private subnet, we will connect to the Session Manager endpoint over a TLS encrypted connection, so we need to allow outbound connection from our instance to VPC CIDR through port 443.\nCreate security group for VPC Endpoint In this step, we will create security group for VPC Endpoint of Session Manager. After successfully creating the security group for the Windows instance in the private subnet, click the Security Groups link to return to the Security groups list. Click Create security group. In the Security group name field, enter SG VPC Endpoint. In the Description section, enter SG VPC Endpoint. In the VPC section, click the X to reselect the Lab VPC you created for this lab. Scroll down. Delete Outbound rule. Add Inbound rule allowing TCP 443 to come from 10.10.0.0/16 ( CIDR of Lab VPC we created ). Click Create security group. So we are done creating the necessary security groups for EC2 instances and VPC Endpoints.\n"
+},
+{
 	"uri": "//localhost:1313/4-configvpnonfortigate/",
 	"title": "MinhThoai-Chưaxong",
 	"tags": [],
@@ -131,6 +152,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Ở bước này ta tiến hành tạo 2 loggroup trên cloudwatch. 1 Log group để lưu trữ log của vpn aws cho phép chúng ta dễ dàng kiểm tra và biết trạng thái vpn. 1 log group để lưu trữ trạng thái ssm cho phép lưu trữ các command khi nhập trong ec2\nchèn hình ảnh Trong giao diện CloudWatch Logs. Tạo group log cho ssm Chọn Log Groups Chọn Create log group Log group name nhập /aws/ssm/hosts Chọn Create Tạo loggroup cho vpn Name: nhập vpns2s/log Enable tính năng ssm lưu trữ log về cloudwatch\nỞ bước này bạn bật tính năng cho phép lưu trữ log truy cập và các lệnh thực hiện khi user truy cập vào EC2 về cloudwatch Trong giao diện AWS Systems Manager. Chọn Session Manager Chọn tab Preferences Chọn Edit hình ảnh Trong Cloudwatch logging Chọn Enable Bỏ chọn Enforce encryption Chọn vpns2s/log Chọn Save hình ảnh "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.2-createec2/2.2.5-createec2linux/",
+	"title": "Create Public instance",
+	"tags": [],
+	"description": "",
+	"content": " Go to EC2 service management console Click Instances. Click Launch instances. On the Step 1: Choose an Amazon Machine Image (AMI) page. Click Select to select AMI Amazon Linux 2 AMI. On the Step 2: Choose an Instance Type page. Click on Instance type t2.micro. Click Next: Configure Instance Details. At Step 3: Configure Instance Details page In the Network section, select Lab VPC. In the Subnet section, select Lab Public Subnet. In the Auto-assign Public IP section, select Use subnet setting (Enable) Click Next: Add Storage. Click Next: Add Tags to move to the next step. Click Next: Configure Security Group to move to the next step. On page Step 6: Configure Security Group. Select Select an existing security group. Select security group SG Public Linux Instance. Click Review and Launch. The warning dialog box appears because we do not configure the firewall to allow connections to port 22, Click Continue to continue.\nAt page Step 7: Review Instance Launch.\nClick Launch. In the Select an existing key pair or create a new key pair dialog box. Click to select Create a new key pair. In the Key pair name field, enter LabKeypair. Click Download Key Pair and save it to your computer. Click Launch Instances to create EC2 server. Click View Instances to return to the list of EC2 instances.\nClick the edit icon under the Name column.\nIn the Edit Name dialog box, enter Public Linux Instance. Click Save. Next, we will do the same to create an EC2 Instance Windows running in the Private subnet.\n"
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.4-enablelogssm/",
@@ -147,7 +175,7 @@
 	"content": " Trong bài thực hành này, chúng ta sẽ xây dựng một mô hình DC theo sơ đồ bên dưới: chèn hình ảnh ** lưu ý ở bài lab này mình sử dụng model 100D version v6.4.12 build2060 (GA)** firmware: v6.4.12\nCấu hình ip wan, ip local Trong giao diện cấu hình Fortigate: Chọn Network -\u0026gt; Interface WAN1 -\u0026gt; Chọn Edit Alias, nhập Wan Internet IP/Netmask, nhập ip ISP cấp 118.107.96.13/24 Administrative Access IPv4 check Ping chèn hình ảnh Tiếp theo ta cấu hình IP Local DC :\nChọn Network -\u0026gt; Interface LAN(Port6) -\u0026gt; Click Edit IP/Netmask, nhập ip Gw local 172.16.4.1/24 Administrative Access IPv4 check Ping chèn hình ảnh "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.3-createloggroup/2.3.1-role/",
+	"uri": "//localhost:1313/2-prerequiste/2.3-createloggroup/",
 	"title": "Role AWS",
 	"tags": [],
 	"description": "",

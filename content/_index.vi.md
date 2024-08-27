@@ -1,20 +1,21 @@
 ---
-title : "Session Management"
+title : "VPN Site To Site"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 ---
-# Làm việc với Amazon System Manager - Session Manager
+# Triển Khai VPN Site to Site
 
 ### Tổng quan
 
- Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon System Manager - Session Management. Thực hành tạo kết nối đến máy chủ public và máy chủ private trong VPC.
+ Trong bài lab này, bạn sẽ tìm hiểu các bước thiết lập kết nối giữa Site Amazon Web Service và Site DC On-Premise sử dụng thiết bị Fortigate 100F. Thực hành tạo kết nối giữa các máy chủ của VPN trên aws và các máy trong trung tâm dữ liệu On-Premise.
 
-![ConnectPrivate](/images/arc-log.png) 
+![Diagram](/images/Diagram.png)
 
 ### Nội dung
 
  1. [Giới thiệu](1-introduce/)
  2. [Các bước chuẩn bị](2-Prerequiste/)
- 3. [VPN Site to Site AWS](/3-VPN%20Site%20to%20Site%20on%20premises/)
- 4. [MinhThoai-chưaxong](/4-Chưa%20xong/)
+ 3. [VPN Site to Site AWS](/3-ConfigVPNOnAWS/)
+ 4. [Cấu Hình VPN Site to Site on Fortigate](/4-ConfigVPNOnFortigate/)
+ 5. [Dọn dẹp tài nguyên](/5-Cleanup/)

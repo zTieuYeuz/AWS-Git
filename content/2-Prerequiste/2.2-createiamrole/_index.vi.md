@@ -50,4 +50,3 @@ Trong bước này chúng ta sẽ tiến hành tạo IAM Role. Trong IAM Role n�
 
 ![Attachrole](/images/2.prerequisite/045-iamrole.png)
 
-9. Tương tự lập lại bước 7-8 cho EC2_Public
