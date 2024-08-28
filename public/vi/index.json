@@ -151,7 +151,7 @@
 	"title": "Kiểm tra tình trạng VPN",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Truy cập vào cloudwatchlog để xem log về phase 1 phase 2 của vpn Tại giao diện cloudwatch , chọn Log groups, chọn vpns2s/log, chọn log 1 tunnel và kiểm tra trạng thái đã thiết lập VPN Kiểm tra trạng thái tunnel : Trạng thái tunnel của vpn up trên Fortigate Trạng thái VPN trên aws Kiểm tra bảng định tuyến Bảng routes trên aws sẽ tự xuất hiện subnet của DC Trên giao diện Fortigate chọn Dashboard chọn + nhập Routing rồi chọn + , sau đó chọn Add Monitor để tạo bảng monitor routing Dashboard chọn Routing Monitor xem sự xuất hiện của Subnet aws trên Fortigate ** lưu ý ở đây : mình chỉ thấy có 1 route duy nhất cho interface VPN AWS Tunnel1 do route mình đang xài dynamic nên cả 2 site Fortigate và AWS sẽ tự động hóa chọn 1 tunnel để truyền dữ liệu. Tunnel 2 sẽ ở trạng thái backup khi có downtime ở tunnel 1 trên aws ** "
 },
 {
 	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/",
