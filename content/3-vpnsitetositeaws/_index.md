@@ -29,7 +29,7 @@ This lab helps us learn how to set up a Site to Site VPN connection in AWS. In p
 Within the scope of this lab, we assume that we have a Main office (**VPC ASG**) and a Branch office located in an On-premises Data Center to differentiate the network. In the VPC, we create an EC2 instance with SSM enabled and a PC in the DC. Our task is to configure the VPN so that the Private IP addresses on both ends can ping each other using the Site-to-Site VPN.
 
 **Appendix:**
-1. [Create Virtual Private Gateway](/3-vpnsitetositeaws/3.1-createvirtualprivategateway/_index.md)
-2. [Configure Customer Gateway](/content/3-vpnsitetositeaws/3.2-createcustomergateway/_index.md)
-3. [Create VPN Connection](/3-vpnsitetositeaws/3.3-createVPN/_index.md)
+1. [Create Virtual Private Gateway](/3-vpnsitetositeaws/3.1-createvirtualprivategateway/)
+2. [Configure Customer Gateway](/content/3-vpnsitetositeaws/3.2-createcustomergateway/)
+3. [Create VPN Connection](/3-vpnsitetositeaws/3.3-createVPN/)
 
