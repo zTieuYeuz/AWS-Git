@@ -15,7 +15,7 @@ pre : " <b> 2.1.2 </b> "
 
 2. Tại trang **Create subnet**.
   + Tại mục **VPC ID** click chọn **Lab VPC**.
-  + Tại mục **Subnet name** điền **Lab Public Subnet**.
+  + Tại mục **Subnet name** điền **Public Subnet 1**.
   + Tại mục **Availability Zone** chọn Availability zone đầu tiên.
   + Tại mục **IPv4 CIRD block** điền **10.10.1.0/24**.
 
@@ -23,7 +23,7 @@ pre : " <b> 2.1.2 </b> "
 
 3. Kéo xuống cuối trang , click **Create subnet**.
 
-4. Click chọn **Lab Public Subnet**.
+4. Click chọn **Public Subnet 1**.
   + Click **Actions**.
   + Click **Edit subnet settings**.
 
@@ -67,7 +67,9 @@ pre : " <b> 2.1.2 </b> "
   + Tại mục **Name**, điền **Route Table Public**.
   + Tại mục **VPC**, chọn **ASG**.
   + Click **Create route table**.
+  
   ![VPC](/images/2.prerequisite/011-creatertbpublic.png)
+
 12. Sau khi tạo route table thành công.
   + Click **Edit routes**.
   

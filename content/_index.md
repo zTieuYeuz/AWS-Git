@@ -1,19 +1,15 @@
----
-title : "VPN Site to Site Aws And Fortigate"
-date :  "`r Sys.Date()`" 
-weight : 1 
-chapter : false
----
-# Work with Amazon System Manager - Session Manager
+# Deploy Site-to-Site VPN with On-Premise DC using Dynamic Route
 
-### Overall
- In this lab, you'll learn the basics and practice of Amazon  System Manager - Session Manager
-. Perform creating public and private instance connections. 
+### Overview
 
-![ConnectPrivate](/images/arc-log.png) 
+In this lab, you will learn the steps to establish a connection between the Amazon Web Service Site and the On-Premise DC Site using the Fortigate 100F device. Practice creating a connection between VPN servers on AWS and machines in the On-Premise data center.
 
-### Content
- 1. [Introduction ](1-introduce/)
- 2. [Accounting](2-Accounting/)
- 3. [VPN Site to Site AWS](/3-VPN%20Site%20to%20Site%20on%20premises/)
- 4. [MinhThoai-chưaxong](/4-Chưa%20xong/)
+![Diagram](/images/Diagram.png)
+
+### Contents
+
+1. [Introduction](1-introduce/)
+2. [Preparation Steps](2-Prerequiste/)
+3. [AWS Site-to-Site VPN](3-vpnsitetositeaws/)
+4. [Configure Site-to-Site VPN on Fortigate](4-vpnsitetositefortigate/)
+5. [Clean Up Resources](5-Cleanup/)

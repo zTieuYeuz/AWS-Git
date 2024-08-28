@@ -1,17 +1,24 @@
 [
 {
+	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/_index.vi2/",
+	"title": "Chuẩn bị VPC và EC2",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 2 EC2 Instance Linux nằm trong public subnet và private subnet.\nTổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:\nNội dung Tạo VPC Tạo Public subnet Tạo Private subnet Tạo security group Tạo 2 máy chủ Linux ở 2 subnet khác nhau "
+},
+{
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.1-createvpc/",
 	"title": "Create VPC",
 	"tags": [],
 	"description": "",
-	"content": "Create VPC Lab VPC Go to VPC service management console Click Your VPC. Click Create VPC. At the Create VPC page. In the Name tag field, enter Lab VPC. In the IPv4 CIDR field, enter: 10.10.0.0/16. Click Create VPC. "
+	"content": "Create VPC Lab VPC Access the VPC service management interface Click Your VPCs. Click Create VPC. On the Create VPC page: In the Name tag field, enter ASG. In the IPv4 CIDR field, enter: 10.10.0.0/16. Click Create VPC. "
 },
 {
 	"uri": "//localhost:1313/1-introduce/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Session Manager is a function within the AWS System Manager service, SSM provides verifiable and secure version management without opening incoming ports, without Bastion Host or SSH key management. Session Manager also makes it easy to comply with corporate policies that require controlled access to instances, strict security practices, and fully auditable logs with instance access details, while still providing end-users with one-click cross-platform access to your managed instances.\nBy using Session Manager, you get the following advantages that traditional methods do not have:\nNo need to open port 22 for SSH protocol, so it is more secure. Can be configured so that the connection does not need to go outside the internet, so it is more secure. No need to manage the server\u0026rsquo;s private key to connect to SSH. Centralized management of users using AWS IAM. Access to the server easily and simply with one click. Faster access time than traditional methods like SSH Support many different operating systems such as Linux, Windows, MacOS Log the connection sessions and commands executed while connecting to the server. With the above advantages, you can use Session Manager instead of using Bastion host technique to save us time and money when managing Bastion server.\n"
+	"content": "AWS Site-to-Site VPN is a service that helps securely connect on-premises networks with the AWS cloud over the internet. AWS Site-to-Site VPN allows the creation of an encrypted VPN connection between the on-premises network and AWS, supporting high-security standards, ensuring strict security, and maintaining a stable connection with your network system.\nBy using AWS Site-to-Site VPN, you will gain the following benefits:\nEnsure high security with data encryption throughout the transmission process. Easily integrate with other AWS services such as EC2, VPC, S3, CloudWatch, etc. Centralized management and simplified connection with multiple branches. Support routing protocols like Static Route and BGP to optimize routing. AWS Site-to-Site VPN helps save time and costs, while simplifying the deployment and maintenance of secure connections between on-premises and AWS. With these advantages, you can also use VPN instead of Direct Connect, which helps save costs when it comes to transmission lines. VPN Cost of Site-to-Site VPN is calculated based on a fixed cost of approximately 36 USD per month for one VPN Connection. This cost does not include the traffic cost going out of the VPC.\n"
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/",
@@ -21,67 +28,95 @@
 	"content": "In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.\nThe architecture overview after you complete this step will be as follows:\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Create VPC Create Public Subnet Create Private Subnet Create security group Create public Linux server Create private Windows server "
 },
 {
-	"uri": "//localhost:1313/",
-	"title": "VPN Site to Site Aws And Fortigate",
+	"uri": "//localhost:1313/2-prerequiste/2.2-createiamrole/",
+	"title": "Create IAM Role",
 	"tags": [],
 	"description": "",
-	"content": "Work with Amazon System Manager - Session Manager Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Accounting VPN Site to Site AWS MinhThoai-chưaxong "
-},
-{
-	"uri": "//localhost:1313/2-prerequiste/",
-	"title": "Accounting",
-	"tags": [],
-	"description": "",
-	"content": "Phụ lục\nMFA-Alias User and Group Role and Policy Budgets "
+	"content": "Create IAM Role In this step, we will create an IAM Role. This IAM Role will be assigned the AmazonSSMManagedInstanceCore and CloudwatchLogsFullAccess policies, which allow the EC2 instance to communicate with the Session Manager and CloudWatch logs.\nAccess the IAM service management interface In the left navigation pane, select Roles. Click Create role. Click AWS service and then click EC2. Click Next: Permissions. In the search bar, Input AmazonSSMManagedInstanceCore and press Enter to search for this policy. Select the AmazonSSMManagedInstanceCore policy. Then input CloudwatchLogsFullAccess and press Enter to search for this policy. Select the CloudwatchLogsFullAccess policy. Click Next: Tags. Click Next: Review. Name the Role SSM-Role in the Role Name field. Click Create Role. Next, we will assign this role to the public and private EC2 instances. Access the EC2 management interface. Click Instances. Check EC2_Private. Click Action -\u0026gt; Click Security. Click Change security groups. Select the SSM-Role you just created. Click Update IAM role. "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/",
 	"title": "Create Public Subnet",
 	"tags": [],
 	"description": "",
-	"content": "Create Public Subnet Click Subnets. Click Create subnet. At the Create subnet page. In the VPC ID section, click Lab VPC. In the Subnet name field, enter Lab Public Subnet. In the Availability Zone section, select the first Availability zone. In the field IPv4 CIRD block enter 10.10.1.0/24. Scroll to the bottom of the page, click Create subnet.\nClick Lab Public Subnet.\nClick Actions. Click Edit subnet settings. Click Enable auto-assign public IPv4 address. Click Save. Click Internet Gateways. Click Create internet gateway. At the Create internet gateway page. In the Name tag field, enter Lab IGW. Click Create internet gateway. After successful creation, click Actions. Click Attach to VPC. At the Attach to VPC page. In the Available VPCs section, select Lab VPC. Click Attach internet gateway. Check the successful attaching process as shown below. Next we will create a custom route table to assign to Lab Public Subnet. Click Route Tables. Click Create route table. At the Create route table page. In the Name field, enter Lab Publicrtb. In the VPC section, select Lab VPC. Click Create route table. After creating the route table successfully. Click Edit routes. At the Edit routes page. Click Add route. In the Destination field, enter 0.0.0.0/0 In the Target section, select Internet Gateway and then select Lab IGW. Click Save changes. Click the Subnet associations tab. Click Edit subnet associations to proceed with the associate custom route table we just created in Lab Public Subnet. At the Edit subnet associations page. Click on Lab Public Subnet. Click Save associations. Check that the route table information has been associated with Lab Public Subnet and the internet route information has been pointed to the Internet Gateway as shown below. "
+	"content": "Create Public Subnet Click Subnets. Click Create subnet. On the Create subnet page: In the VPC ID field, select Lab VPC. In the Subnet name field, enter Public Subnet 1. In the Availability Zone field, select the first Availability Zone. In the IPv4 CIDR block field, enter 10.10.1.0/24. Scroll to the bottom of the page and click Create subnet.\nSelect Public Subnet 1.\nClick Actions. Click Edit subnet settings. Select Enable auto-assign public IPv4 address. Click Save. Click Internet Gateways. Click Create internet gateway. On the Create internet gateway page: In the Name tag field, enter Lab IGW. Click Create internet gateway. After successful creation, click Actions. Click Attach to VPC. On the Attach to VPC page: In the Available VPCs field, select ASG. Click Attach internet gateway. Verify the successful attachment as shown below. Next, we will create a custom route table to associate with the Public Subnet. Click Route Tables. Click Create route table. On the Create route table page: In the Name field, enter Route Table Public. In the VPC field, select ASG. Click Create route table. After successfully creating the route table: Click Edit routes. On the Edit routes page: Click Add route. In the Destination field, enter 0.0.0.0/0. In the Target field, select Internet Gateway and then select the previously created Lab IGW. Click Save changes. Click the Subnet associations tab. Click Edit subnet associations to associate the custom route table we just created with the Lab Public Subnet. On the Edit subnet associations page: Select Lab Public Subnet. Click Save associations. Verify that the route table has been associated with the Lab Public Subnet and that the route to the internet is directed to the Internet Gateway as shown below. "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.2-createiamrole/",
-	"title": "Create user Group",
+	"uri": "//localhost:1313/2-prerequiste/",
+	"title": "Preparation Steps",
 	"tags": [],
 	"description": "",
-	"content": " Create User Create Group user "
+	"content": "\rBefore starting to configure VPN with AWS and Fortinet, you should prepare some knowledge about static and dynamic routing protocols. You can refer to a brief introduction about Dynamic Routing BGP which will be used in this lab in section 4.\nTo perform this lab, you need to further study Fortigate firewall. You can virtualize this firewall on VMware with a 14-day license for the lab. Here, I am using Fortigate 100F hardware (Version v6.4.12 build2060 (GA)).\nYou need to create 2 Linux instances in the public subnet and private subnet to perform this practice.\nTo learn how to create EC2 instances and VPC with public/private subnets, you can refer to the following labs:\nIntroduction to Amazon EC2 Working with Amazon VPC To learn how to create IAM roles with ssm and cloudwatch permissions, you can refer to the following labs:\nAWS CloudWatch Workshop Working with Amazon System Manager - Session Manager To learn about routing protocols, you can refer to:\nBorder Gateway Protocol (BGP) Appendix\nPrepare VPC and EC2 Instance Create IAM Role Create CloudWatch Log Group Enable ssm feature to store logs in CloudWatch Prepare Fortigate device "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.3-createloggroup/",
+	"title": "Create CloudWatch Log Groups",
+	"tags": [],
+	"description": "",
+	"content": "Create CloudWatch Log Groups In this step, we will create 2 CloudWatch Log Groups. The purpose is: + To store and categorize logs of AWS VPN, allowing us to easily check and know the status of the VPN. + To store and categorize logs of commands used when accessing EC2 via SSM.\nAccess the CloudWatch management interface.\nCreate Log Groups for SSM:\nSelect Log Groups. Select Create log group. In the Log group name field, input /aws/ssm/hosts. Click Create. Similarly, create Log Groups for VPN:\nIn the Name field, input vpns2s/log. "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/",
 	"title": "Create Private Subnet",
 	"tags": [],
 	"description": "",
-	"content": "Create Private Subnet Click Subnets. Click Create subnet. At the Create subnet page. In the VPC ID section, click Lab VPC. In the Subnet name field, enter Lab Private Subnet. In the Availability Zone section, select the first Availability zone. In the field IPv4 CIRD block enter 10.10.2.0/24. Scroll to the bottom of the page, click Create subnet. The next step is to create the necessary security groups for the lab.\n"
+	"content": "Create Private Subnet In the VPC interface, click Subnets. Click Create subnet. On the Create subnet page:\nIn the VPC ID field, select ASG. In the Subnet name field, enter Private Subnet 1. In the Availability Zone field, select the first Availability Zone. In the IPv4 CIDR block field, enter 10.10.100.0/24. Scroll to the bottom of the page and click Create subnet. Repeat the above steps to create Private Subnet 2. Next, we will create a custom route table to associate with the Private Subnet.\nClick Route Tables. Click Create route table. On the Create route table page:\nIn the Name field, enter Route Table Private. In the VPC field, select ASG. Click Create route table. In the Route table - Private interface:\nSelect Subnet Associations. Select Edit subnet associations. In the Edit subnet associations interface:\nSelect the 2 private subnets. Click Save associations. The next step is to create NAT gateways to allow EC2 instances in the private subnet to communicate with the internet.\nCreate NAT Gateway In this step, we will create a NAT gateway to allow EC2 instances in the private subnet to access the internet.\nAccess the VPC management interface. In the NAT gateway interface:\nIn the Name field, enter My Natgw. In the Subnet field, select Public subnet 2. In the Connectivity type field, select Public. In the Elastic IP allocation ID field, click Allocate Elastic IP to create an Elastic IP. Click Create Nat Gateway. Successfully created NAT gateway. In the Route table - Private interface:\nSelect Routes. Select Edit routes. In the Edit routes interface:\nSelect Add route. In the Destination field, enter 0.0.0.0/0. In the Target field, select NAT Gateway. Click Save changes. Verify the routes. "
+},
+{
+	"uri": "//localhost:1313/4-vpnsitetositefortigate/",
+	"title": "Configuring Site-to-Site VPN on Fortigate",
+	"tags": [],
+	"description": "",
+	"content": "Before configuring, let\u0026rsquo;s briefly understand the dynamic routing protocol BGP and why it should be used.\nBorder Gateway Protocol (BGP) is a dynamic routing protocol used on the Internet to exchange information between different networks. It is one of the most important protocols that help network systems exchange information and determine the optimal path for data transmission. BGP is designed to operate in large network systems, especially in the global Internet network, where hundreds of thousands of networks need to be interconnected. BGP can determine the data transmission path based on multiple attributes such as bandwidth, quality, and the number of network hops the data needs to traverse. This helps the protocol choose the most optimal path to transmit data from source to destination efficiently and quickly.\nAdditionally, BGP plays a role in keeping the Internet operating stably by periodically updating routing information, reliably and flexibly. BGP is a good choice for large, complex networks that require automation and flexibility if there are many networks. Compared to static routes, BGP has superior advantages:\nAttribute BGP (Border Gateway Protocol) Static Route Automation and Flexibility Automatically learns and adjusts routes when there are changes in the network. Requires manual configuration of all routes, manual updates needed when changes occur. Scalability Suitable for large networks, handles millions of routes. Suitable for small or simple networks, difficult to manage as the network expands. Routing Policies Supports complex routing policies based on multiple attributes. Does not support complex routing policies. Resilience Automatically switches routes in case of failure, ensuring quick recovery. Manual configuration of backup routes required, not flexible. Security Supports security mechanisms like MD5, but requires complex management. Simpler, less prone to attacks but can still be misconfigured. Use Cases Suitable for large, complex networks with multiple ISPs, requiring automation and quick recovery. Suitable for small, simple networks, not requiring automation or complex recovery. Contents Create IP Sec Tunnel Configure Tunnel 1 and Tunnel 2 Interfaces Configure BGP Routing Create Policies for VPN Check VPN Status "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/",
-	"title": "Create security groups",
+	"title": "Create Security Groups",
 	"tags": [],
 	"description": "",
-	"content": "Create security groups In this step, we will proceed to create the security groups used for our instances. As you can see, these security groups will not need to open traditional ports to ssh like port 22 or remote desktop through port 3389.\nCreate security group for Linux instance located in public subnet Go to VPC service management console Click Security Group. Click Create security group. In the Security group name field, enter SG Public Linux Instance. In the Description section, enter SG Public Linux Instance. In the VPC section, click the X to reselect the Lab VPC you created for this lab. Keep Outbound rule, drag the mouse to the bottom. Click Create security group. As you can see, the security group we created to use for Linux public instances will not need to open traditional ports to ssh like port 22.\nCreate a security group for a Windows instance located in a private subnet After successfully creating a security group for the Linux instance located in the public subnet, click the Security Groups link to return to the Security groups list. Click Create security group.\nIn the Security group name field, enter SG Private Windows Instance.\nIn the Description section, enter SG Private Windows Instance. In the VPC section, click the X to reselect the Lab VPC you created for this lab. Scroll down. Add Outbound rule to allow TCP 443 connection to 10.10.0.0/16 ( CIDR of Lab VPC we created) Click Create security group. For the Instance in the private subnet, we will connect to the Session Manager endpoint over a TLS encrypted connection, so we need to allow outbound connection from our instance to VPC CIDR through port 443.\nCreate security group for VPC Endpoint In this step, we will create security group for VPC Endpoint of Session Manager. After successfully creating the security group for the Windows instance in the private subnet, click the Security Groups link to return to the Security groups list. Click Create security group. In the Security group name field, enter SG VPC Endpoint. In the Description section, enter SG VPC Endpoint. In the VPC section, click the X to reselect the Lab VPC you created for this lab. Scroll down. Delete Outbound rule. Add Inbound rule allowing TCP 443 to come from 10.10.0.0/16 ( CIDR of Lab VPC we created ). Click Create security group. So we are done creating the necessary security groups for EC2 instances and VPC Endpoints.\n"
-},
-{
-	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.5-createec2linux/",
-	"title": "Create Public instance",
-	"tags": [],
-	"description": "",
-	"content": " Go to EC2 service management console Click Instances. Click Launch instances. On the Step 1: Choose an Amazon Machine Image (AMI) page. Click Select to select AMI Amazon Linux 2 AMI. On the Step 2: Choose an Instance Type page. Click on Instance type t2.micro. Click Next: Configure Instance Details. At Step 3: Configure Instance Details page In the Network section, select Lab VPC. In the Subnet section, select Lab Public Subnet. In the Auto-assign Public IP section, select Use subnet setting (Enable) Click Next: Add Storage. Click Next: Add Tags to move to the next step. Click Next: Configure Security Group to move to the next step. On page Step 6: Configure Security Group. Select Select an existing security group. Select security group SG Public Linux Instance. Click Review and Launch. The warning dialog box appears because we do not configure the firewall to allow connections to port 22, Click Continue to continue.\nAt page Step 7: Review Instance Launch.\nClick Launch. In the Select an existing key pair or create a new key pair dialog box. Click to select Create a new key pair. In the Key pair name field, enter LabKeypair. Click Download Key Pair and save it to your computer. Click Launch Instances to create EC2 server. Click View Instances to return to the list of EC2 instances.\nClick the edit icon under the Name column.\nIn the Edit Name dialog box, enter Public Linux Instance. Click Save. Next, we will do the same to create an EC2 Instance Windows running in the Private subnet.\n"
+	"content": "Create Security Groups In this step, we will create the security groups used for our instances.\nCreate Security Group for Linux Instance in Public Subnet Access the VPC service management interface Click Security Groups. Click Create security group. In the Security group name field, input private_security_group. In the Description field, input SG Public for EC2 Public. In the VPC field, select the VPC ASG you created for this lab. In the Inbound rules section, add 2 rules: SSH and All ICMP - IPv4. Keep the Outbound rules as default, scroll down. Click Create security group. You can see that the security group we created for the Linux public instance does not need to open traditional ports for SSH like port 22.\nCreate Security Group for EC2 Instance in Private Subnet After successfully creating the security group for the Linux instance in the public subnet, click the Security Groups link to return to the Security Groups list. Click Create security group.\nIn the Security group name field, input Public_security_group.\nIn the Description field, input SG for EC2 Private. In the VPC field, select the ASG you created for this lab. In the Inbound rules section, add 1 rule: All ICMP - IPv4. This rule allows ping from EC2 instances in the private subnet. Keep the Outbound rules as default, scroll down. Click Create security group. For instances in the private subnet, we will use Session Manager with a TLS-encrypted connection. Therefore, we can connect through the NAT gateway. To optimize costs, you can use the Session Manager endpoint instead of going out to the internet via the NAT gateway. Here, my lab focuses more on VPN, so if you deploy the endpoint, refer to the lab Working with Amazon System Manager - Session Manager.\n"
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.4-enablelogssm/",
-	"title": "Budgets",
+	"title": "Manage SSM Session Logs with CloudWatch Logs",
 	"tags": [],
 	"description": "",
-	"content": "Create Budgets Đăng nhập vào console AWS Tìm kiếm và chọn Billing and cost Management Trang home \u0026ldquo;billing cost Management\u0026rdquo; Chọn tab bill phía bên trái Create a Budgets Choose budgets Type Use template Monthly cost budget Điền thông tin cho budgets Budgets name Enter your budgeted amount Email recipients Cảnh báo của Budgets sau khi tạo "
+	"content": "In this step, we will enable the CloudWatch feature in SSM to allow access logs and command execution logs when users access EC2 to be pushed to CloudWatch.\nIn the AWS Systems Manager interface:\nSelect Session Manager. Select the Preferences tab. Select Edit. In the CloudWatch logging section: Select Enable. Uncheck Enforce encryption. Select vpns2s/log. Select Save. "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.3-createloggroup/",
-	"title": "Role AWS",
+	"uri": "//localhost:1313/5-cleanup/",
+	"title": "Clean up resources",
 	"tags": [],
 	"description": "",
-	"content": " Đăng nhập vào console AWS IAM Click chọn Role Click \u0026ldquo;create role\u0026rdquo; Click Select trusted ntity click AWS service Service or use case : ec2 use case : ec2 Set permission policies Click amazonEC2FullAcess Review and create Chúng ta đã tạo xong role cho AWS "
+	"content": "We will proceed with the following steps to delete the resources we created in this practice.\nDelete EC2 instances. Access the EC2 service management interface\nClick Instances. Click to select both EC2_Public and EC2_Private instances. Click Instance state. Click Terminate instance, then click Terminate(Delete)instance to confirm. Click confirm Terminate(Delete)instance NAT Gateway\nDelete NAT Gateway and Elastic IP Address. AWS will charge for unused EIP, so you need to check carefully to avoid unwanted charges. Access the Amazon VPC console. On the left navigation bar, click NAT Gateway. Select NAT Gateway. Click Action. Click Delete NAT Gateway. Type delete. Click Delete to confirm the deletion of NAT Gateway Elastic IP Address\nContinue to delete Elastic IP Address. On the left navigation bar, click Elastic IP. Select the Elastic IP Address we created. Click Actions Click Release Elastic IP Address Click Release. Delete VPN Site to Site Connection.\nIn the VPC interface Select Site-to-Site VPN connections on the left Select Actions Select Delete VPN connection Type delete Click Delete to confirm the deletion of VPN Delete Virtual Private Gateway(VPG).\nIn the VPC interface Select Virtual private gateways Select Actions Select Detach from VPC Click Detach virtual private gateway Select Virtual private gateways Select Actions Select Delete virtual private gateway Delete Customer Gateway(CG).\nIn the VPC interface Select Customer gateways on the left Select Actions Select Delete customer gateways Delete VPC ASG.\nIn the VPC interface Select ASG Select Actions Select Delete VPC "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.5-createec2linux/",
+	"title": "Create EC2 in Private Subnet and Public Subnet",
+	"tags": [],
+	"description": "",
+	"content": " Access the EC2 service management interface Click Instances. Click Launch instances. On the Step 1: Choose an Amazon Machine Image (AMI) page: Click Select to choose the Amazon Linux 2 AMI. Scroll down to: Select the instance type t2.micro. In the Network field, select ASG. In the Subnet field, select Public Subnet 1. In the Auto-assign Public IP field, select Enable. Select Select an existing security group. Select the security group public_security_group. In the Advanced Details section: In the IAM instance profile field, select SSM-Role. Click Launch instance. Repeat steps 2-4 to create another EC2 instance, but note the following changes: In the Subnet field, select Private Subnet 2. In the Auto-assign Public IP field, select Disable. Select the security group private_security_group. Follow the rest of the steps as in steps 2-4. After creation, you should see the following result: "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.5-fortigate/",
+	"title": "Prepare On-Premise Environment",
+	"tags": [],
+	"description": "",
+	"content": "In this exercise, we will build an on-premise datacenter model according to the diagram below:\nNote that in this lab, I am using version 6.4.12 build 2060 (GA). This lab can be deployed on many versions 6 and 7.\nConfigure WAN Interface and Local Interface. In the Fortigate configuration interface:\nSelect Network -\u0026gt; Select Interface WAN1 -\u0026gt; Click Edit. In the Alias field, input Wan Internet. In the Address mode field, select Manual. In the IP/Netmask field, input the ISP-provided IP 118.107.96.13/24. In the Administrative Access IPv4 field, select Ping. In the Status field, select Enabled. Click OK. Next, configure the Local DC IP: Select Network -\u0026gt; Select Interface LAN (Port6) -\u0026gt; Click Edit. In the Alias field, input LAN. In the Address mode field, select Manual. In the IP/Netmask field, input the local IP 172.16.4.1/24. In the Administrative Access IPv4 field, select Ping. In the Status field, select Enabled. Click OK. Configure routing so that the WAN interface can access the internet.\nSelect Network -\u0026gt; Select Static Routes -\u0026gt; Click Create New. In the Gateway Address field, input 118.107.96.1. Click OK. Note that the range 118.107.96.0/24 configured in this lab is a public IP address range provided by the ISP, which includes the IP Gateway address.\n"
+},
+{
+	"uri": "//localhost:1313/4-vpnsitetositefortigate/4.1-createtunnel/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Deploy Site-to-Site VPN with On-Premise DC using Dynamic Route Overview In this lab, you will learn the steps to establish a connection between the Amazon Web Service Site and the On-Premise DC Site using the Fortigate 100F device. Practice creating a connection between VPN servers on AWS and machines in the On-Premise data center.\nContents Introduction Preparation Steps AWS Site-to-Site VPN Configure Site-to-Site VPN on Fortigate Clean Up Resources "
 },
 {
 	"uri": "//localhost:1313/categories/",
