@@ -19,7 +19,7 @@ Trong giao diện cấu hình Fortigate:
 2. Cấu hình Interface tunnel 2
    + Chỗ **IP** nhập  **169.254.52.6**
    + **Remote IP/Netmask** nhập **169.254.52.5/30**
-   + **Administrative Access chọn Ping**
+   + **Administrative Access** chọn **Ping**
    + **Status** chọn **Enable**
    + Chọn **OK**
 ![fg](/images/4.vpnsitetositefortigate/FG-VPN-Interface3.png)

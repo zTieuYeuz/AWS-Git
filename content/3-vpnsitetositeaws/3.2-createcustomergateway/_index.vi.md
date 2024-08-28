@@ -1,5 +1,5 @@
 ---
-title : "Cấu hình Customer gateway"
+title : "Cấu hình Customer Gateway"
 date :  "`r Sys.Date()`" 
 weight : 2
 chapter : false
