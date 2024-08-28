@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/3-vpnsitetositeaws/3.1-createvirtualprivategateway/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/3.1-createvirtualprivategateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/3.1-createvirtualprivategateway/"
+                />
+  </url><url>
     <loc>//localhost:1313/2-prerequiste/2.1-createec2/2.1.1-createvpc/</loc>
     <xhtml:link
                 rel="alternate"
@@ -84,6 +96,30 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/2-prerequiste/2.2-createiamrole/"
+                />
+  </url><url>
+    <loc>//localhost:1313/3-vpnsitetositeaws/3.3-createvpn/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/3.3-createvpn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/3.3-createvpn/"
+                />
+  </url><url>
+    <loc>//localhost:1313/3-vpnsitetositeaws/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/"
                 />
   </url><url>
     <loc>//localhost:1313/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/</loc>

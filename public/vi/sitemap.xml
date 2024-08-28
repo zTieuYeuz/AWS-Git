@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.1-createtunnelipsec/</loc>
+  </url><url>
+    <loc>//localhost:1313/vi/3-vpnsitetositeaws/3.1-createvirtualprivategateway/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/3.1-createvirtualprivategateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/3.1-createvirtualprivategateway/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/2.1-createec2/</loc>
     <xhtml:link
                 rel="alternate"
@@ -62,6 +76,10 @@
                 href="//localhost:1313/vi/2-prerequiste/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/3-vpnsitetositeaws/3.2-createcustomergateway/</loc>
+  </url><url>
+    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.2-create-interface-tunnel12/</loc>
+  </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/2.2-createiamrole/</loc>
     <xhtml:link
                 rel="alternate"
@@ -86,7 +104,33 @@
                 href="//localhost:1313/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/3-vpnsitetositeaws/3.3-createvpn/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/3.3-createvpn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/3.3-createvpn/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/3-vpnsitetositeaws/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/</loc>
+  </url><url>
+    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.4-createpolicy/</loc>
   </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/2.3-createloggroup/</loc>
     <xhtml:link
@@ -137,6 +181,8 @@
                 hreflang="vi"
                 href="//localhost:1313/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/"
                 />
+  </url><url>
+    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.5-checkvpn/</loc>
   </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/</loc>
     <xhtml:link
