@@ -8,7 +8,11 @@ pre : " <b> 5 </b> "
 
 
 Chúng ta sẽ tiến hành các bước sau để xóa lần lượt các tài nguyên chúng ta đã tạo trong bài thực hành này.
+{{% notice info %}}
 
+Nếu bạn triển khai VPC,EC2,ElasticIP,NATGW bằng terraform thì bạn có xóa bằng terraform mà không cần phải xóa bằng tay. Tham khảo [Bước 8](#8)  .
+
+{{% /notice %}}
 1.  Xóa các EC2. Truy cập [giao diện quản trị dịch vụ EC2](https://console.aws.amazon.com/ec2/v2/home)
     -   Click **Instances**.
     -   Click chọn cả 2 instance **EC2_Public** và **EC2_Private**. 
@@ -64,17 +68,20 @@ Chúng ta sẽ tiến hành các bước sau để xóa lần lượt các tài 
     -   Chọn **Delete virtual private gateway**
         ![clean](/images/5.cleanup/011-clean.png)
         ![clean](/images/5.cleanup/012-clean.png)    
-5.  Xóa Customer Gateway(CG).
+6.  Xóa Customer Gateway(CG).
     -   Trong giao diện VPC
     -   Chọn **Customer gateways**  ở bên trái
     -   Chọn **Actions**
     -   Chọn **Delete customer gateways** 
         ![clean](/images/5.cleanup/013-clean.png)
         ![clean](/images/5.cleanup/014-clean.png)
-6.  Xóa VPC ASG.
+7.  Xóa VPC ASG.
     -   Trong giao diện VPC
     -   Chọn **ASG**
     -   Chọn **Actions**
     -   Chọn **Delete VPC** 
         ![clean](/images/5.cleanup/015-clean.png)
-        
+
+## {#8}
+8.  Xóa các resource ở bước 1,2,3,7  
+    -   Nhập câu lệnh **terraform destroy -y**

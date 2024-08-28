@@ -28,13 +28,6 @@
 	"content": "In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.\nThe architecture overview after you complete this step will be as follows:\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Create VPC Create Public Subnet Create Private Subnet Create security group Create public Linux server Create private Windows server "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/_index.vi111111/",
-	"title": "Các bước chuẩn bị",
-	"tags": [],
-	"description": "",
-	"content": "\rTrước khi bắt đầu cấu hình VPN với AWS và Fortinet. Bạn nên chuẩn bị cho mình 1 chút kiến thức về giao thức định tuyến tĩnh và động. Bạn tham khảo thêm giới thiệu sơ về Dynamic Routing BGP sẽ sử dụng trong bài lab này ở phần 4\nĐể thực hiện được bài lab này bạn cần phải nghiên cứu thêm về tường lửa Fortigate. Có thể dùng ảo hóa firewall này trên vmware với license 14 ngày để làm lab. Còn đây mình dùng phần cứng Fortigate 100F( Version v6.4.12 build2060 (GA))\nBạn cần tạo sẵn 2 Linux instance thuộc public subnet và private subnet để thực hiện bài thực hành này.\nĐể tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :\nGiới thiệu về Amazon EC2 Làm việc với Amazon VPC Để tìm hiểu cách tạo IAM role gán quyền ssm,cloudwatch các bạn có thể tham khảo bài lab:\nAWS CloudWatch Workshop Làm việc với Amazon System Manager - Session Manager Để tìm hiểu giao thức định tuyến có thể tham khảo:\nGiao thức Border Gateway Protocol(BGP) Phụ lục\nChuẩn bị VPC và EC2 Instance Tạo IAM Role Tạo loggroup Cloudwatch Bật tính năng ssm lưu trữ log về cloudwatch Chuẩn bị thiết bị Fortigate "
-},
-{
 	"uri": "//localhost:1313/3-vpnsitetositeaws/3.2-createcustomergateway/",
 	"title": "Create Customer Gateways",
 	"tags": [],

@@ -3,7 +3,7 @@
 
 ### Tổng quan
 
- Trong bài lab này, bạn sẽ tìm hiểu các bước thiết lập kết nối giữa Site Amazon Web Service và Site DC On-Premise sử dụng thiết bị Fortigate 100F. Thực hành tạo kết nối giữa các máy chủ của VPN trên aws và các máy trong trung tâm dữ liệu On-Premise.
+Trong bài lab này, bạn sẽ tìm hiểu các bước thiết lập kết nối giữa Site Amazon Web Service và Site DC On-Premise sử dụng thiết bị Fortigate 100F. Thực hành tạo kết nối giữa các máy chủ của VPN trên aws và các máy trong trung tâm dữ liệu On-Premise.
 
 ![Diagram](/images/Diagram.png)
 

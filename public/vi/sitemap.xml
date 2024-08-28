@@ -38,6 +38,18 @@
                 href="//localhost:1313/vi/1-introduce/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.1-createtunnel/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-vpnsitetositefortigate/4.1-createtunnel/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-vpnsitetositefortigate/4.1-createtunnel/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/</loc>
     <xhtml:link
                 rel="alternate"
@@ -218,17 +230,7 @@
                 href="//localhost:1313/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.1-createtunnel/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-vpnsitetositefortigate/4.1-createtunnel/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-vpnsitetositefortigate/4.1-createtunnel/"
-                />
+    <loc>//localhost:1313/vi/2-prerequiste/2.6-repairbycodeoptional/</loc>
   </url><url>
     <loc>//localhost:1313/vi/</loc>
     <xhtml:link
