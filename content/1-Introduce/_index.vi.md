@@ -17,3 +17,4 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
 
 
 Với những ưu điểm trên, bạn cũng có thể sử dụng VPN thay vì sử dụng Direct Connect nó giúp chúng ta tiết kiệm được chi phí khi đường truyền.
+** Chi phí VPN** của VPN Site to Site được tính dựa trên cost cố định của 1 VPN Connection khoảng 36usd/1 tháng. Chí phí này chưa bao gồm chi phí traffic đi ra ngoài VPC

@@ -3,30 +3,30 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Hugo 0.131.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Budgets :: AWS VPN Site to Site</title>
+    <title>Manage SSM Session Logs with CloudWatch Logs :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724833697" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724833697" rel="stylesheet">
-    <link href="/css/hybrid.css?1724833697" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724833697" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724833697" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724833697" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724833697" rel="stylesheet">
-    <link href="/css/theme.css?1724833697" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724833697" rel="stylesheet">
+    <link href="/css/nucleus.css?1724837784" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724837784" rel="stylesheet">
+    <link href="/css/hybrid.css?1724837784" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724837784" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724837784" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724837784" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724837784" rel="stylesheet">
+    <link href="/css/theme.css?1724837784" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724837784" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724833697" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724837784" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724833697"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724837784"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724833697"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724833697"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724837784"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724837784"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724833697"></script>
+<script type="text/javascript" src="/js/search.js?1724837784"></script>
 
     
   </div>
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Accounting" class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="Preparation Steps" class="dd-item 
         parent
         
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Accounting
+           <b> 2. </b> Preparation Steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -254,13 +254,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create Security Groups" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
-           <b> 2.1.4 </b> Create security groups
+           <b> 2.1.4 </b> Create Security Groups
           
             <i class="fas fa-check read-icon"></i>
           
@@ -282,13 +282,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Create Public instance" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Create EC2 in Private Subnet and Public Subnet" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Create Public instance
+           <b> 2.1.5 </b> Create EC2 in Private Subnet and Public Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,34 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="Create user Group" class="dd-item 
+      <li data-nav-id="/2-prerequiste/_index.vi111111/" title="Các bước chuẩn bị" class="dd-item ">
+        <a href="/2-prerequiste/_index.vi111111/">
+         <b> 2. </b> Các bước chuẩn bị
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="Create IAM Role" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Create user Group
+           <b> 2.2 </b> Create IAM Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -347,41 +368,69 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.4-enablelogssm/" title="Budgets" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/2-prerequiste/2.4-enablelogssm/">
-           <b> 2.4 </b> Budgets
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-prerequiste/2.3-createloggroup/" title="Role AWS" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.3-createloggroup/" title="Create CloudWatch Log Groups" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.3-createloggroup/">
-           <b> 2.3.1 </b> Role AWS
+           <b> 2.3 </b> Create CloudWatch Log Groups
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.4-enablelogssm/" title="Manage SSM Session Logs with CloudWatch Logs" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/2-prerequiste/2.4-enablelogssm/">
+           <b> 2.4 </b> Manage SSM Session Logs with CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.5-fortigate/" title="Prepare On-Premise Environment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.5-fortigate/">
+           <b> 2.5 </b> Prepare On-Premise Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,13 +490,13 @@
  
   
     
-    <li data-nav-id="/3-vpnsitetositeaws/3.1-createvirtualprivategateway/" title="Cấu hình virteal private Gateway" class="dd-item 
+    <li data-nav-id="/3-vpnsitetositeaws/3.1-createvirtualprivategateway/" title="Creating a Virtual Private Gateway" class="dd-item 
         
         
         
         ">
       <a href="/3-vpnsitetositeaws/3.1-createvirtualprivategateway/">
-           <b> 3.1 </b> Cấu hình virteal private Gateway
+           <b> 3.1 </b> Creating a Virtual Private Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -469,13 +518,41 @@
  
   
     
-    <li data-nav-id="/3-vpnsitetositeaws/3.3-createvpn/" title="Cấu hình Site to Site VPN" class="dd-item 
+    <li data-nav-id="/3-vpnsitetositeaws/3.2-createcustomergateway/" title="Create Customer Gateways" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-vpnsitetositeaws/3.2-createcustomergateway/">
+           <b> 3.2 </b> Create Customer Gateways
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-vpnsitetositeaws/3.3-createvpn/" title="Creating a VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/3-vpnsitetositeaws/3.3-createvpn/">
-           <b> 3.3 </b> Cấu hình Site to Site VPN
+           <b> 3.3 </b> Creating a VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -490,6 +567,98 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/" title="Configuring Site-to-Site VPN on Fortigate" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/">
+           <b> 4 </b> Configuring Site-to-Site VPN on Fortigate
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/4.1-createtunnel/" title="" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/4.1-createtunnel/">
+          
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-cleanup/">
+           <b> 5 </b> Clean up resources
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -637,7 +806,7 @@
             
           
           
-            <a href='/'>VPN Site to Site Aws And Fortigate</a> > <a href='/2-prerequiste/'>Accounting</a> > Budgets
+            <a href='/'></a> > <a href='/2-prerequiste/'>Preparation Steps</a> > Manage SSM Session Logs with CloudWatch Logs
           
         
           
@@ -650,11 +819,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#create-budgets">Create Budgets</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -670,7 +835,7 @@
           
             <h1>
               
-              Budgets
+              Manage SSM Session Logs with CloudWatch Logs
             </h1>
           
 
@@ -678,34 +843,26 @@
 
 
 
-	<h2 id="create-budgets">Create Budgets</h2>
+	<p>In this step, we will enable the <strong>CloudWatch</strong> feature in <strong>SSM</strong> to allow access logs and command execution logs when users access EC2 to be pushed to <strong>CloudWatch</strong>.</p>
 <ol>
-<li>Đăng nhập vào console <a href="https://console.aws.amazon.com/">AWS</a></li>
-<li>Tìm kiếm và chọn Billing and cost Management
-<img alt="bill" src="/images/1.account/bub-01.png"></li>
-<li>Trang home &ldquo;billing cost Management&rdquo;
-<img alt="bill" src="/images/1.account/bub-02.png"></li>
-<li>Chọn tab bill phía bên trái
-<img alt="bill" src="/images/1.account/bub-03.png"></li>
-<li>Create a Budgets
-<img alt="bill" src="/images/1.account/bub-04.png"></li>
-<li>Choose budgets Type
+<li>
+<p>In the <a href="https://ap-southeast-1.console.aws.amazon.com/systems-manager">AWS Systems Manager</a> interface:</p>
 <ul>
-<li>Use template</li>
-<li>Monthly cost budget
-<img alt="bill" src="/images/1.account/bub-05.png"></li>
+<li>Select <strong>Session Manager</strong>.</li>
+<li>Select the <strong>Preferences</strong> tab.</li>
+<li>Select <strong>Edit</strong>.</li>
+</ul>
+<p><img alt="enablessm" src="/images/2.prerequisite/049-SSM.png"></p>
+<ul>
+<li>In the CloudWatch logging section:</li>
+<li>Select <strong>Enable</strong>.</li>
+<li>Uncheck <strong>Enforce encryption</strong>.</li>
+<li>Select <strong>vpns2s/log</strong>.</li>
+<li>Select <strong>Save</strong>.
+<img alt="enablessm" src="/images/2.prerequisite/050-SSM.png">
+<img alt="enablessm" src="/images/2.prerequisite/051-SSM.png"></li>
 </ul>
 </li>
-<li>Điền thông tin cho budgets
-<ul>
-<li>Budgets name</li>
-<li>Enter your budgeted amount</li>
-<li>Email recipients
-<img alt="bill" src="/images/1.account/bub-06.png"></li>
-</ul>
-</li>
-<li>Cảnh báo của Budgets sau khi tạo
-<img alt="bill" src="/images/1.account/bub-07.png"></li>
 </ol>
 
 
@@ -899,6 +1056,38 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -979,6 +1168,72 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -992,10 +1247,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-prerequiste/2.2-createiamrole/" title="Create user Group"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-prerequiste/2.3-createloggroup/" title="Create CloudWatch Log Groups"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/2.3-createloggroup/" title="Role AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-prerequiste/2.5-fortigate/" title="Prepare On-Premise Environment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1005,19 +1260,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724833697"></script>
-    <script src="/js/jquery.sticky.js?1724833697"></script>
-    <script src="/js/featherlight.min.js?1724833697"></script>
-    <script src="/js/highlight.pack.js?1724833697"></script>
+    <script src="/js/clipboard.min.js?1724837784"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724837784"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724837784"></script>
+    <script src="/js/jquery.sticky.js?1724837784"></script>
+    <script src="/js/featherlight.min.js?1724837784"></script>
+    <script src="/js/highlight.pack.js?1724837784"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724833697"></script>
-    <script src="/js/learn.js?1724833697"></script>
-    <script src="/js/hugo-learn.js?1724833697"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724837784"></script>
+    <script src="/js/learn.js?1724837784"></script>
+    <script src="/js/hugo-learn.js?1724837784"></script>
 
-    <link href="/mermaid/mermaid.css?1724833697" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724833697"></script>
+    <link href="/mermaid/mermaid.css?1724837784" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724837784"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

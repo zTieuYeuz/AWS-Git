@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Hugo 0.131.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Cấu hình VPN Site to Site Trên Fortigate :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724833697" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724833697" rel="stylesheet">
-    <link href="/css/hybrid.css?1724833697" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724833697" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724833697" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724833697" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724833697" rel="stylesheet">
-    <link href="/css/theme.css?1724833697" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724833697" rel="stylesheet">
+    <link href="/css/nucleus.css?1724837866" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724837866" rel="stylesheet">
+    <link href="/css/hybrid.css?1724837866" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724837866" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724837866" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724837866" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724837866" rel="stylesheet">
+    <link href="/css/theme.css?1724837866" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724837866" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724833697" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724837866" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724833697"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724837866"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724833697"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724833697"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724837866"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724837866"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724833697"></script>
+<script type="text/javascript" src="/js/search.js?1724837866"></script>
 
     
   </div>
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/">
-           <b> 2. </b> Các bước chuẩn bị
+           <b> 2. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -347,13 +347,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/" title="CloudWatch Logs" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/" title="Tạo CloudWatch Log Groups" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/2.3-createloggroup/">
-           <b> 2.3 </b> CloudWatch Logs
+           <b> 2.3 </b> Tạo CloudWatch Log Groups
           
             <i class="fas fa-check read-icon"></i>
           
@@ -375,13 +375,41 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.4-enablelogssm/" title="Quản lý session logs với CloudWatch Logs" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.4-enablelogssm/" title="Quản lý session logs của SSM với CloudWatch Logs" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/2.4-enablelogssm/">
-           <b> 2.4 </b> Quản lý session logs với CloudWatch Logs
+           <b> 2.4 </b> Quản lý session logs của SSM với CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.5-fortigate/" title="Chuẩn bị môi trường On-Premise" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.5-fortigate/">
+           <b> 2.5 </b> Chuẩn bị môi trường On-Premise
           
             <i class="fas fa-check read-icon"></i>
           
@@ -563,125 +591,13 @@
  
   
     
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.1-createtunnelipsec/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.1-createtunnel/" title="Tạo Tunnel IPSEC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-vpnsitetositefortigate/4.1-createtunnelipsec/">
-           <b> 4.1 </b> Cấu hình Site to Site VPN trên AWS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.2-create-interface-tunnel12/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-vpnsitetositefortigate/4.2-create-interface-tunnel12/">
-           <b> 4.2 </b> Cấu hình Site to Site VPN trên AWS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/">
-           <b> 4.3 </b> Cấu hình Site to Site VPN trên AWS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.4-createpolicy/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-vpnsitetositefortigate/4.4-createpolicy/">
-           <b> 3.3 </b> Cấu hình Site to Site VPN trên AWS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.5-checkvpn/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-vpnsitetositefortigate/4.5-checkvpn/">
-           <b> 4.5 </b> Cấu hình Site to Site VPN trên AWS
+      <a href="/vi/4-vpnsitetositefortigate/4.1-createtunnel/">
+           <b> 4.1 </b> Tạo Tunnel IPSEC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -696,6 +612,32 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-cleanup/">
+           <b> 5 </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -731,6 +673,18 @@
             <select id="select-language" onchange="location = this.value;">
           
           
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="//localhost:1313/4-vpnsitetositefortigate/">English</option>
+                    
+                  
+              
+                  
+              
           
               
               
@@ -827,7 +781,7 @@
             
           
           
-            <a href='/vi/'>VPN Site To Site</a> > Cấu hình VPN Site to Site Trên Fortigate
+            <a href='/vi/'></a> > Cấu hình VPN Site to Site Trên Fortigate
           
         
           
@@ -838,7 +792,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nôi-dung">Nội dung</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -862,16 +824,60 @@
 
 
 
-	<p><strong>AWS Site-to-Site VPN</strong> là một dịch vụ giúp kết nối an toàn các mạng on-premises với đám mây AWS qua mạng internet. AWS Site-to-Site VPN cho phép xây dựng một kết nối VPN được mã hóa giữa mạng của on-premises và AWS, hỗ trợ các tiêu chuẩn bảo mật cao cấp, đảm bảo bảo mật nghiêm ngặt và duy trì kết nối ổn định với hệ thống mạng của bạn.
-Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những lợi ích sau:</p>
+	<p>Trước khi cấu hình chúng ta tìm hiểu sơ qua về giao thức định tuyến động <strong>BGP</strong>. Vì sao nên dùng <strong>BGP</strong>.</p>
+<p><strong>Border Gateway Protocol (BGP)</strong> là một giao thức định tuyến <strong>động</strong> được sử dụng trong mạng Internet để trao đổi thông tin giữa các mạng con (networks) khác nhau. Đây là một trong những giao thức quan trọng nhất giúp các hệ thống mạng trao đổi thông tin và xác định con đường tối ưu để chuyển tiếp dữ liệu. BGP được thiết kế để hoạt động trong các hệ thống mạng lớn, đặc biệt trong mạng lưới Internet toàn cầu, nơi hàng có trăm nghìn mạng con cần liên kết với nhau.
+<strong>BGP</strong> có khả năng xác định con đường chuyển tiếp dữ liệu dựa trên nhiều thuộc tính như băng thông, chất lượng và số lượng các đường truyền mạng con mà dữ liệu cần đi qua. Điều này giúp giao thức chọn ra đường tối ưu nhất để truyền dữ liệu từ nguồn đến đích một cách hiệu quả và nhanh chóng.</p>
+<p>Bên cạnh đó, BGP có vai trò giữ cho Internet hoạt động một cách ổn định bằng cách cập nhật thông tin định tuyến định kỳ, đáng tin cậy và linh hoạt.
+BGP là lựa chọn tốt cho các mạng lớn, phức tạp và cần khả năng tự động, linh hoạt nếu có nhiều networks. So sánh với static route thì BGP ưu điểm vượt trội hơn:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Thuộc tính</strong></th>
+<th style="text-align:center"><strong>BGP (Border Gateway Protocol)</strong></th>
+<th style="text-align:center"><strong>Static Route (Định tuyến tĩnh)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Tính tự động và linh hoạt</strong></td>
+<td style="text-align:center">Tự động học và điều chỉnh tuyến đường khi có thay đổi trong mạng.</td>
+<td style="text-align:center">Cần cấu hình thủ công mọi tuyến đường, cần cập nhật thủ công khi có thay đổi.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Khả năng mở rộng</strong></td>
+<td style="text-align:center">Thích hợp cho mạng lớn, xử lý hàng triệu tuyến đường.</td>
+<td style="text-align:center">Phù hợp cho mạng nhỏ hoặc đơn giản, khó quản lý khi mạng mở rộng.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Chính sách định tuyến</strong></td>
+<td style="text-align:center">Hỗ trợ các chính sách định tuyến phức tạp dựa trên nhiều thuộc tính.</td>
+<td style="text-align:center">Không hỗ trợ chính sách định tuyến phức tạp.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Khả năng phục hồi</strong></td>
+<td style="text-align:center">Tự động chuyển đổi tuyến đường khi gặp sự cố, đảm bảo phục hồi nhanh chóng.</td>
+<td style="text-align:center">Phải cấu hình thủ công các tuyến đường dự phòng, không linh hoạt.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Bảo mật</strong></td>
+<td style="text-align:center">Hỗ trợ cơ chế bảo mật như MD5, nhưng yêu cầu quản lý phức tạp.</td>
+<td style="text-align:center">Đơn giản hơn, ít bị tấn công hơn nhưng vẫn có thể cấu hình sai.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Tình huống sử dụng</strong></td>
+<td style="text-align:center">Thích hợp cho mạng lớn, phức tạp, nhiều ISP, cần tự động và phục hồi nhanh.</td>
+<td style="text-align:center">Phù hợp cho mạng nhỏ, đơn giản, không cần tự động hóa hay phục hồi phức tạp.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nôi-dung">Nội dung</h3>
 <ul>
-<li>Đảm bảo bảo mật cao với mã hóa dữ liệu trong suốt quá trình truyền.</li>
-<li>Tích hợp dễ dàng với các dịch vụ AWS khác như EC2, VPC, và S3,Cloudwatch..</li>
-<li>Quản lý tập trung và đơn giản hóa việc kết nối với nhiều chi nhánh khác nhau.</li>
-<li>Hỗ trợ các giao thức VPN phổ biến như IPsec và BGP để tối ưu hóa việc định tuyến.</li>
-<li>AWS Site-to-Site VPN giúp tiết kiệm thời gian và chi phí, đồng thời đơn giản hóa việc triển khai và duy trì kết nối an toàn giữa on-premises với AWS.</li>
+<li><a href="/vi/4-vpnsitetositefortigate/4.1-createtunnel/">Tạo tunnel IP Sec</a></li>
+<li><a href="4.2-configinterfacetunnel/">Cấu hình interface tunnel 1 và tunnel 2</a></li>
+<li><a href="4.3-configroutingbgp/">Cấu hình routing BGP</a></li>
+<li><a href="4.4-createpolicy/">Tạo các policy cho VPN</a></li>
+<li><a href="4.5-checkstatusvpn/">Kiểm tra tình trạng VPN </a></li>
 </ul>
-<p>Với những ưu điểm trên, bạn cũng có thể sử dụng VPN thay vì sử dụng Direct Connect nó giúp chúng ta tiết kiệm được chi phí khi đường truyền.</p>
 
 
 
@@ -1087,56 +1093,6 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1161,7 +1117,6 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
             
                 
                     
-                    
                 
                 
 
@@ -1171,25 +1126,6 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1239,6 +1175,47 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
             
             
@@ -1251,9 +1228,6 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -1270,7 +1244,7 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
 			<a class="nav nav-prev" href="/vi/3-vpnsitetositeaws/3.3-createvpn/" title="Cấu hình Site to Site VPN"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/4-vpnsitetositefortigate/4.1-createtunnelipsec/" title="Cấu hình Site to Site VPN trên AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/4-vpnsitetositefortigate/4.1-createtunnel/" title="Tạo Tunnel IPSEC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1280,19 +1254,19 @@ Với việc sử dụng AWS Site-to-Site VPN, bạn sẽ có được những l
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724833697"></script>
-    <script src="/js/jquery.sticky.js?1724833697"></script>
-    <script src="/js/featherlight.min.js?1724833697"></script>
-    <script src="/js/highlight.pack.js?1724833697"></script>
+    <script src="/js/clipboard.min.js?1724837866"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724837866"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724837866"></script>
+    <script src="/js/jquery.sticky.js?1724837866"></script>
+    <script src="/js/featherlight.min.js?1724837866"></script>
+    <script src="/js/highlight.pack.js?1724837866"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724833697"></script>
-    <script src="/js/learn.js?1724833697"></script>
-    <script src="/js/hugo-learn.js?1724833697"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724837866"></script>
+    <script src="/js/learn.js?1724837866"></script>
+    <script src="/js/hugo-learn.js?1724837866"></script>
 
-    <link href="/mermaid/mermaid.css?1724833697" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724833697"></script>
+    <link href="/mermaid/mermaid.css?1724837866" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724837866"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
