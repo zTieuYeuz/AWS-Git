@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình Site to Site VPN trên AWS :: AWS VPN Site to Site</title>
+    <title>Tạo BGP :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724833697" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724833697" rel="stylesheet">
-    <link href="/css/hybrid.css?1724833697" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724833697" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724833697" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724833697" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724833697" rel="stylesheet">
-    <link href="/css/theme.css?1724833697" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724833697" rel="stylesheet">
+    <link href="/css/nucleus.css?1724850798" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724850798" rel="stylesheet">
+    <link href="/css/hybrid.css?1724850798" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724850798" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724850798" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724850798" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724850798" rel="stylesheet">
+    <link href="/css/theme.css?1724850798" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724850798" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724833697" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724850798" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724833697"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724850798"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724833697"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724833697"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724850798"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724850798"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724833697"></script>
+<script type="text/javascript" src="/js/search.js?1724850798"></script>
 
     
   </div>
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/">
-           <b> 2. </b> Các bước chuẩn bị
+           <b> 2. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -347,13 +347,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/" title="CloudWatch Logs" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-createloggroup/" title="Tạo CloudWatch Log Groups" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/2.3-createloggroup/">
-           <b> 2.3 </b> CloudWatch Logs
+           <b> 2.3 </b> Tạo CloudWatch Log Groups
           
             <i class="fas fa-check read-icon"></i>
           
@@ -375,13 +375,41 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.4-enablelogssm/" title="Quản lý session logs với CloudWatch Logs" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.4-enablelogssm/" title="Quản lý session logs của SSM với CloudWatch Logs" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-prerequiste/2.4-enablelogssm/">
-           <b> 2.4 </b> Quản lý session logs với CloudWatch Logs
+           <b> 2.4 </b> Quản lý session logs của SSM với CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.5-fortigate/" title="Chuẩn bị môi trường On-Premise" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.5-fortigate/">
+           <b> 2.5 </b> Chuẩn bị môi trường On-Premise
           
             <i class="fas fa-check read-icon"></i>
           
@@ -538,7 +566,7 @@
         
         ">
       <a href="/vi/4-vpnsitetositefortigate/">
-           <b> 4 </b> Cấu hình VPN Site to Site Trên Fortigate
+           <b> 4. </b> Cấu hình VPN Site to Site Trên Fortigate
           
             <i class="fas fa-check read-icon"></i>
           
@@ -563,13 +591,13 @@
  
   
     
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.1-createtunnelipsec/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.1-createtunnelipsec/" title="Tạo Tunnel IPSEC" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-vpnsitetositefortigate/4.1-createtunnelipsec/">
-           <b> 4.1 </b> Cấu hình Site to Site VPN trên AWS
+           <b> 4.1 </b> Tạo Tunnel IPSEC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -591,13 +619,13 @@
  
   
     
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.2-create-interface-tunnel12/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.2-createtunnel12/" title="Tạo tunnel 1-2 tren Fortigate" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-vpnsitetositefortigate/4.2-create-interface-tunnel12/">
-           <b> 4.2 </b> Cấu hình Site to Site VPN trên AWS
+      <a href="/vi/4-vpnsitetositefortigate/4.2-createtunnel12/">
+           <b> 4.2 </b> Tạo tunnel 1-2 tren Fortigate
           
             <i class="fas fa-check read-icon"></i>
           
@@ -619,13 +647,13 @@
  
   
     
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/" title="Tạo BGP" class="dd-item 
         
         active
         
         ">
       <a href="/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/">
-           <b> 4.3 </b> Cấu hình Site to Site VPN trên AWS
+           <b> 4.3 </b> Tạo BGP
           
             <i class="fas fa-check read-icon"></i>
           
@@ -647,13 +675,13 @@
  
   
     
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.4-createpolicy/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.4-createpolicy/" title="Tạo Policy" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-vpnsitetositefortigate/4.4-createpolicy/">
-           <b> 3.3 </b> Cấu hình Site to Site VPN trên AWS
+           <b> 4.4 </b> Tạo Policy
           
             <i class="fas fa-check read-icon"></i>
           
@@ -675,13 +703,13 @@
  
   
     
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.5-checkvpn/" title="Cấu hình Site to Site VPN trên AWS" class="dd-item 
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.5-checkvpn/" title="Kiểm tra tình trạng VPN" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-vpnsitetositefortigate/4.5-checkvpn/">
-           <b> 4.5 </b> Cấu hình Site to Site VPN trên AWS
+           <b> 4.5 </b> Kiểm tra tình trạng VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -696,6 +724,32 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-cleanup/">
+           <b> 5 </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -731,6 +785,18 @@
             <select id="select-language" onchange="location = this.value;">
           
           
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="//localhost:1313/4-vpnsitetositefortigate/4.3-createroutingbgp/">English</option>
+                    
+                  
+              
+                  
+              
           
               
               
@@ -831,7 +897,7 @@
             
           
           
-            <a href='/vi/'>VPN Site To Site</a> > <a href='/vi/4-vpnsitetositefortigate/'>Cấu hình VPN Site to Site Trên Fortigate</a> > Cấu hình Site to Site VPN trên AWS
+            <a href='/vi/'></a> > <a href='/vi/4-vpnsitetositefortigate/'>Cấu hình VPN Site to Site Trên Fortigate</a> > Tạo BGP
           
         
           
@@ -860,7 +926,7 @@
           
             <h1>
               
-              Cấu hình Site to Site VPN trên AWS
+              Tạo BGP
             </h1>
           
 
@@ -868,31 +934,30 @@
 
 
 
-	<p>Chúng ta kết nối TTDL On-premise tới Amazon VPC sử dụng VPN phần cứng Fortigate
-Để thiết lập kết nối VPN Site to Site, chúng ta sẽ cần tạo và cấu hình Virtual Private Gateway <strong>VPG</strong> và Customer Gateway <strong>CGW</strong>.</p>
+	<ol>
+<li>Trong giao diện cấu hình Fortigate bạn cấu hình luôn routing cho cả 2 tunnel theo file:
 <ul>
-<li>Virtual Private Gateway (VPG) là một trung tâm điều khiển kết nối the virtual private network (VPN) được cài đặt ở đầu AWS.</li>
-<li>A Customer Gateway (CGW) là thành phần đại diện cho thiết bị VPN cứng hoặc mềm được cài đặt ở đầu Khách hàng. Ở đây chính là fortigate.</li>
+<li>Chọn Network -&gt; Chọn BGP</li>
+<li>Router-ID nhập 118.107.96.13</li>
+<li>Chọn Apply
+<img alt="bgp" src="/images/4.vpnsitetositefortigate/BGP-1.png"></li>
+<li>Neighbor chọn Create new. Hộp Add Neighbor hiện ra để cấu hình tunnel 1</li>
+<li>IP nhập 169.254.52.5, Remote AS nhập 64512
+<img alt="bgp" src="/images/4.vpnsitetositefortigate/BGP-2.png"></li>
+<li>IP/Netmask nhập 172.16.4.0/24. Đây là dải địa chỉ được Fortigate dùng để quảng bá cho AWS<br>
+<strong>lưu ý ở chỗ này cấu hình khác với trong file</strong>
+<img alt="bgp" src="/images/4.vpnsitetositefortigate/BGP-3.png"></li>
 </ul>
-<p><strong>VPN tunnel</strong> sẽ được thiết lập ngay sau khi lưu lượng dữ liệu được truyền tải giữa AWS và hệ thống mạng của khách hàng. Trong kết nối đó, ta phải chỉ rõ loại định tuyến sẽ được sử dụng để đảm bảo an toàn cũng như chất lượng về mặt truyền tải dữ liệu.
-Do CGW ở phía khách hàng có hỗ trợ Border Gateway Protocol (BGP), thì trong cấu hình VPN connection ta bắt buộc phải đặt định tuyến là dynamic routing.
-Amazon VPC cung cấp nhiều loại CGWs, và từng CGW được gán với một VPG nhưng 1 VPG có thể kết hợp với nhiều CGW (many-to-one design). Để hỗ trợ mô hình này thì địa chỉ IP của CGW phải là duy nhất trong một region.
-Amazon VPC cũng cung cấp các thông tin cần thiết cho Nhân viên quản trị mạng có thể cấu hình CGW và thiết lập kết nối VPN tới VPG trên AWS. Kết nối VPN luôn bao gồm 2 Internet Protocol Security (IPSec) tunnels để đảm bảo tính sẵn sàng cao của kết nối.</p>
-<p>Bên dưới là những đặc điểm quan trọng mà ta cần nắm về VPG, CGW, and VPN:</p>
+</li>
+<li>Cấu hình neighbors cho tunnel 2
 <ul>
-<li>VPG là thành phần đầu cuối của VPN tunnel nằm trên AWS.</li>
-<li>CGW có thể là thiết bị phần cứng hoặc ứng dụng phần mềm nằm ở đầu Khách hàng trong kết nối VPN tunnel.</li>
-<li>Bạn phải khởi tạo kết nối VPN tunnel từ CGW tới VPG.</li>
-<li>VPG hỗ trợ cả dynamic routing (BGP) và static routing.</li>
-<li>Kết nối VPN luôn có 2 tunnels nhằm đảm bảo tính sẵn sàng cao cho kết nối với VPC từ site Khách hàng.</li>
+<li>Neighbors chọn Create New. Hộp Add Neighbor hiện ra để cấu hình tunnel 2
+<img alt="bgp" src="/images/4.vpnsitetositefortigate/BGP-4.png"></li>
+<li>IP nhập <strong>169.254.52.5</strong>, Remote AS nhập 64512 -&gt; Chọn OK</li>
+<li>Chọn Apply
+<img alt="bgp" src="/images/4.vpnsitetositefortigate/BGP-5.png"></li>
 </ul>
-<p>Bài lab giúp chúng ta học được cách thiết lập một kết nối Site to Site VPN trong AWS. Trong thực tế, giải pháp này khá được nhiều doanh nghiệp sử dụng do ưu điểm Fortigate thông dụng và sử dụng nhiều trong doanh nghiệp, đồng thời rất dễ cấu hình do AWS cung cấp hướng dẫn cho từng loại thiết bị Customer trong 1 file cấu hình. Việc Customer bận tâm duy nhất đó là chuẩn bị đường internet để từ đó tạo đường hầm an toàn bí mật (sử dụng IPSec) kết nối tới AWS thông qua AWS VPN tunnel.
-Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong>VPC ASG</strong> ) và Branch office đặt tại DC On-premises để có sự khác biệt về mặt network. Trên VPC  thực hiện tạo EC2 cho phép SSM ,và 1 PC ở DC. Việc ta cần làm là cấu hình VPN để các địa chỉ Private IP ở 2 đầu có thể ping được lẫn nhau sử dụng VPN Site-to-Site.</p>
-<p>Phụ lục</p>
-<ol>
-<li><a href="3.1-createvpgw/">Tạo Virtual Private Gateway</a></li>
-<li><a href="3.2-createcustomergw/">Cấu hình Customer Gateway</a></li>
-<li><a href="3.3-createvpnconnection/">Tạo kết nối VPN</a></li>
+</li>
 </ol>
 
 
@@ -1109,56 +1174,6 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1183,7 +1198,6 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
             
                 
                     
-                    
                 
                 
 
@@ -1198,9 +1212,6 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1234,7 +1245,6 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
             
                 
                     
-                    
                 
                 
 
@@ -1245,6 +1255,25 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -1280,6 +1309,74 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -1293,10 +1390,10 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/4-vpnsitetositefortigate/4.2-create-interface-tunnel12/" title="Cấu hình Site to Site VPN trên AWS"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/4-vpnsitetositefortigate/4.2-createtunnel12/" title="Tạo tunnel 1-2 tren Fortigate"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/4-vpnsitetositefortigate/4.4-createpolicy/" title="Cấu hình Site to Site VPN trên AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/4-vpnsitetositefortigate/4.4-createpolicy/" title="Tạo Policy" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1306,19 +1403,19 @@ Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( <strong
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724833697"></script>
-    <script src="/js/jquery.sticky.js?1724833697"></script>
-    <script src="/js/featherlight.min.js?1724833697"></script>
-    <script src="/js/highlight.pack.js?1724833697"></script>
+    <script src="/js/clipboard.min.js?1724850798"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724850798"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724850798"></script>
+    <script src="/js/jquery.sticky.js?1724850798"></script>
+    <script src="/js/featherlight.min.js?1724850798"></script>
+    <script src="/js/highlight.pack.js?1724850798"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724833697"></script>
-    <script src="/js/learn.js?1724833697"></script>
-    <script src="/js/hugo-learn.js?1724833697"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724850798"></script>
+    <script src="/js/learn.js?1724850798"></script>
+    <script src="/js/hugo-learn.js?1724850798"></script>
 
-    <link href="/mermaid/mermaid.css?1724833697" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724833697"></script>
+    <link href="/mermaid/mermaid.css?1724850798" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724850798"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

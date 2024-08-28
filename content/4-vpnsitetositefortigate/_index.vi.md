@@ -3,7 +3,7 @@ title : "Cấu hình VPN Site to Site Trên Fortigate"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
-pre : " <b> 4 </b> "
+pre : " <b> 4. </b> "
 ---
 
 Trước khi cấu hình chúng ta tìm hiểu sơ qua về giao thức định tuyến động **BGP**. Vì sao nên dùng **BGP**.

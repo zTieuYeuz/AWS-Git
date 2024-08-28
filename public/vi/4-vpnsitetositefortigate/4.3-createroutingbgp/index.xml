@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cấu hình Site to Site VPN trên AWS on AWS VPN Site to Site</title>
+    <title>Tạo BGP on AWS VPN Site to Site</title>
     <link>//localhost:1313/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/</link>
-    <description>Recent content in Cấu hình Site to Site VPN trên AWS on AWS VPN Site to Site</description>
+    <description>Recent content in Tạo BGP on AWS VPN Site to Site</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <atom:link href="//localhost:1313/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/index.xml" rel="self" type="application/rss+xml" />
