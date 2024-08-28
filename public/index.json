@@ -1,17 +1,17 @@
 [
 {
-	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/_index.vi2/",
-	"title": "Chuẩn bị VPC và EC2",
-	"tags": [],
-	"description": "",
-	"content": "Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 2 EC2 Instance Linux nằm trong public subnet và private subnet.\nTổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:\nNội dung Tạo VPC Tạo Public subnet Tạo Private subnet Tạo security group Tạo 2 máy chủ Linux ở 2 subnet khác nhau "
-},
-{
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.1-createvpc/",
 	"title": "Create VPC",
 	"tags": [],
 	"description": "",
 	"content": "Create VPC Lab VPC Access the VPC service management interface Click Your VPCs. Click Create VPC. On the Create VPC page: In the Name tag field, enter ASG. In the IPv4 CIDR field, enter: 10.10.0.0/16. Click Create VPC. "
+},
+{
+	"uri": "//localhost:1313/3-vpnsitetositeaws/3.1-createvirtualprivategateway/",
+	"title": "Creating a Virtual Private Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Creating a Virtual Private Gateway Access the VPC Console\nSelect Virtual Private Gateway Click Create Virtual Private Gateway In the Create Virtual Private Gateway Interface\nFor the Name tag, enter VPN TO DC Select Amazon default ASN Click Create virtual private gateway Attach the Virtual Private Gateway to a VPC\nClick Actions Select Attach to VPC In the Attach to VPC Interface\nChoose VPC ASG Click Attach to VPC Complete the Process and Check that the State is Attached "
 },
 {
 	"uri": "//localhost:1313/1-introduce/",
@@ -26,6 +26,20 @@
 	"tags": [],
 	"description": "",
 	"content": "In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.\nThe architecture overview after you complete this step will be as follows:\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Create VPC Create Public Subnet Create Private Subnet Create security group Create public Linux server Create private Windows server "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/_index.vi111111/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "\rTrước khi bắt đầu cấu hình VPN với AWS và Fortinet. Bạn nên chuẩn bị cho mình 1 chút kiến thức về giao thức định tuyến tĩnh và động. Bạn tham khảo thêm giới thiệu sơ về Dynamic Routing BGP sẽ sử dụng trong bài lab này ở phần 4\nĐể thực hiện được bài lab này bạn cần phải nghiên cứu thêm về tường lửa Fortigate. Có thể dùng ảo hóa firewall này trên vmware với license 14 ngày để làm lab. Còn đây mình dùng phần cứng Fortigate 100F( Version v6.4.12 build2060 (GA))\nBạn cần tạo sẵn 2 Linux instance thuộc public subnet và private subnet để thực hiện bài thực hành này.\nĐể tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :\nGiới thiệu về Amazon EC2 Làm việc với Amazon VPC Để tìm hiểu cách tạo IAM role gán quyền ssm,cloudwatch các bạn có thể tham khảo bài lab:\nAWS CloudWatch Workshop Làm việc với Amazon System Manager - Session Manager Để tìm hiểu giao thức định tuyến có thể tham khảo:\nGiao thức Border Gateway Protocol(BGP) Phụ lục\nChuẩn bị VPC và EC2 Instance Tạo IAM Role Tạo loggroup Cloudwatch Bật tính năng ssm lưu trữ log về cloudwatch Chuẩn bị thiết bị Fortigate "
+},
+{
+	"uri": "//localhost:1313/3-vpnsitetositeaws/3.2-createcustomergateway/",
+	"title": "Create Customer Gateways",
+	"tags": [],
+	"description": "",
+	"content": " Creating a Customer Gateway Access the VPC Console\nSelect Customer Gateways Click Create Customer Gateway In the Create Customer Gateway Interface\nFor the Name tag, enter Customer Gateway For the IP address, enter the public IP address of Fortigate 100F Click Create Customer Gateway Device - Optional: Enter Fortigate Wait approximately 5 minutes for the Customer Gateway creation to complete "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.2-createiamrole/",
@@ -49,20 +63,6 @@
 	"content": "\rBefore starting to configure VPN with AWS and Fortinet, you should prepare some knowledge about static and dynamic routing protocols. You can refer to a brief introduction about Dynamic Routing BGP which will be used in this lab in section 4.\nTo perform this lab, you need to further study Fortigate firewall. You can virtualize this firewall on VMware with a 14-day license for the lab. Here, I am using Fortigate 100F hardware (Version v6.4.12 build2060 (GA)).\nYou need to create 2 Linux instances in the public subnet and private subnet to perform this practice.\nTo learn how to create EC2 instances and VPC with public/private subnets, you can refer to the following labs:\nIntroduction to Amazon EC2 Working with Amazon VPC To learn how to create IAM roles with ssm and cloudwatch permissions, you can refer to the following labs:\nAWS CloudWatch Workshop Working with Amazon System Manager - Session Manager To learn about routing protocols, you can refer to:\nBorder Gateway Protocol (BGP) Appendix\nPrepare VPC and EC2 Instance Create IAM Role Create CloudWatch Log Group Enable ssm feature to store logs in CloudWatch Prepare Fortigate device "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.3-createloggroup/",
-	"title": "Create CloudWatch Log Groups",
-	"tags": [],
-	"description": "",
-	"content": "Create CloudWatch Log Groups In this step, we will create 2 CloudWatch Log Groups. The purpose is: + To store and categorize logs of AWS VPN, allowing us to easily check and know the status of the VPN. + To store and categorize logs of commands used when accessing EC2 via SSM.\nAccess the CloudWatch management interface.\nCreate Log Groups for SSM:\nSelect Log Groups. Select Create log group. In the Log group name field, input /aws/ssm/hosts. Click Create. Similarly, create Log Groups for VPN:\nIn the Name field, input vpns2s/log. "
-},
-{
-	"uri": "//localhost:1313/3-vpnsitetositeaws/3.3-createvpn/",
-	"title": "Cấu hình Site to Site VPN",
-	"tags": [],
-	"description": "",
-	"content": "Tạo kết nối VPN\nTruy cập VPC Chọn Site-to-Site VPN Connections Chọn Create VPN Connection Trong giao diện Create VPN Connection Name tag, nhập VPN Connection to DC Target Gateway Type: Chọn Virtual Private Gateway Virtual Private Gateway: Chọn VPN Gateway Customer Gateway: Existing Customer Gateway ID: Chọn Customer Gateway Routing Options: Dynamic (Requires BGP) Local IPV4 network CIDR: bạn có thể ko nhập hoặc nhập local IP ở DC. Cụ thể mình nhập range local 172.16.4.0/24 Remote IPv4 network CIDR: bạn có thể để trống hoặc nhập IP của CIDR aws. Cụ thể ở đây là 10.10.0.0/16 Tiếp tục thực hiện cấu hình Mở rộng Tunnel 1 options - Optional. Trong tunnel active – Chọn Enable để gửi log VPN về cloudwatch Amazon CloudWatch log group: chọn vpns2s/log Tương tự Enable trong tunnel 2 options Chọn Create VPN Connection Chọn Create VPN Connection Đợi khoảng 5 phút sau, hoàn tất tạo VPN Connection Cấu hình propagation cho các route table Trong giao diện VPC, chọn Route Tables Chọn Route table - Public Chọn Route Propagation Chọn Edit route propagation Trong giao diện Edit route propagation Chọn Enable Chọn Save Hoàn tất và kiểm tra lại Route Propagation đã chuyển sang Yes Tương tự Route Propagation đối với Private subnet "
-},
-{
 	"uri": "//localhost:1313/3-vpnsitetositeaws/",
 	"title": "Configuring Site to Site VPN on AWS",
 	"tags": [],
@@ -70,11 +70,25 @@
 	"content": "We connect the On-premise Data Center to Amazon VPC using a Fortigate hardware VPN. To establish a Site to Site VPN connection, we need to create and configure a Virtual Private Gateway (VPG) and a Customer Gateway (CGW).\nThe Virtual Private Gateway (VPG) is a control center for managing the VPN connection installed at the AWS end. A Customer Gateway (CGW) is a component that represents the hardware or software VPN device installed at the customer end, which in this case is Fortigate. A VPN tunnel will be established once data traffic is transmitted between AWS and the customer\u0026rsquo;s network. In this connection, we must specify the type of routing used to ensure the security and quality of data transmission. If the CGW on the customer side supports Border Gateway Protocol (BGP), dynamic routing must be set in the VPN connection configuration. Amazon VPC provides various types of CGWs, each associated with a VPG, but a single VPG can be linked with multiple CGWs (many-to-one design). To support this model, the CGW’s IP address must be unique within a region. Amazon VPC also provides the necessary information for network administrators to configure the CGW and establish a VPN connection to the VPG on AWS. The VPN connection always includes two Internet Protocol Security (IPSec) tunnels to ensure high availability.\nBelow are the key characteristics of VPG, CGW, and VPN:\nVPG is the endpoint of the VPN tunnel on AWS. CGW can be a hardware device or a software application located at the customer\u0026rsquo;s end of the VPN tunnel. You must initiate the VPN tunnel connection from the CGW to the VPG. VPG supports both dynamic routing (BGP) and static routing. The VPN connection always has two tunnels to ensure high availability of the connection to the VPC from the customer site. This lab helps us learn how to set up a Site to Site VPN connection in AWS. In practice, this solution is quite popular among enterprises due to the widespread use and ease of configuration of Fortigate devices, which are commonly used in businesses. AWS also provides configuration guides for each type of Customer Gateway device in a configuration file. The only concern for the customer is to prepare the internet connection, from which a secure and private tunnel (using IPSec) is created to connect to AWS via the AWS VPN tunnel. Within the scope of this lab, we assume that we have a Main office (VPC ASG) and a Branch office located in an On-premises Data Center to differentiate the network. In the VPC, we create an EC2 instance with SSM enabled and a PC in the DC. Our task is to configure the VPN so that the Private IP addresses on both ends can ping each other using the Site-to-Site VPN.\nAppendix:\nCreate Virtual Private Gateway Configure Customer Gateway Create VPN Connection "
 },
 {
+	"uri": "//localhost:1313/2-prerequiste/2.3-createloggroup/",
+	"title": "Create CloudWatch Log Groups",
+	"tags": [],
+	"description": "",
+	"content": "Create CloudWatch Log Groups In this step, we will create 2 CloudWatch Log Groups. The purpose is: + To store and categorize logs of AWS VPN, allowing us to easily check and know the status of the VPN. + To store and categorize logs of commands used when accessing EC2 via SSM.\nAccess the CloudWatch management interface.\nCreate Log Groups for SSM:\nSelect Log Groups. Select Create log group. In the Log group name field, input /aws/ssm/hosts. Click Create. Similarly, create Log Groups for VPN:\nIn the Name field, input vpns2s/log. "
+},
+{
 	"uri": "//localhost:1313/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/",
 	"title": "Create Private Subnet",
 	"tags": [],
 	"description": "",
 	"content": "Create Private Subnet In the VPC interface, click Subnets. Click Create subnet. On the Create subnet page:\nIn the VPC ID field, select ASG. In the Subnet name field, enter Private Subnet 1. In the Availability Zone field, select the first Availability Zone. In the IPv4 CIDR block field, enter 10.10.100.0/24. Scroll to the bottom of the page and click Create subnet. Repeat the above steps to create Private Subnet 2. Next, we will create a custom route table to associate with the Private Subnet.\nClick Route Tables. Click Create route table. On the Create route table page:\nIn the Name field, enter Route Table Private. In the VPC field, select ASG. Click Create route table. In the Route table - Private interface:\nSelect Subnet Associations. Select Edit subnet associations. In the Edit subnet associations interface:\nSelect the 2 private subnets. Click Save associations. The next step is to create NAT gateways to allow EC2 instances in the private subnet to communicate with the internet.\nCreate NAT Gateway In this step, we will create a NAT gateway to allow EC2 instances in the private subnet to access the internet.\nAccess the VPC management interface. In the NAT gateway interface:\nIn the Name field, enter My Natgw. In the Subnet field, select Public subnet 2. In the Connectivity type field, select Public. In the Elastic IP allocation ID field, click Allocate Elastic IP to create an Elastic IP. Click Create Nat Gateway. Successfully created NAT gateway. In the Route table - Private interface:\nSelect Routes. Select Edit routes. In the Edit routes interface:\nSelect Add route. In the Destination field, enter 0.0.0.0/0. In the Target field, select NAT Gateway. Click Save changes. Verify the routes. "
+},
+{
+	"uri": "//localhost:1313/3-vpnsitetositeaws/3.3-createvpn/",
+	"title": "Creating a VPN Connection",
+	"tags": [],
+	"description": "",
+	"content": " Creating a VPN Connection Access the VPC Console\nSelect Site-to-Site VPN Connections Click Create VPN Connection In the Create VPN Connection Interface\nFor the Name tag, enter VPN Connection to DC Target Gateway Type: Select Virtual Private Gateway Virtual Private Gateway: Select VPN Gateway Customer Gateway: Existing Customer Gateway ID: Select Customer Gateway Routing Options: Dynamic (Requires BGP) Local IPv4 network CIDR: You can leave this blank or enter the local IP at the DC. In this example, enter 172.16.4.0/24 Remote IPv4 network CIDR: You can leave this blank or enter the AWS CIDR. In this example, it is 10.10.0.0/16 Continue with the Configuration\nExpand Tunnel 1 options - Optional. Under Tunnel Active – Select Enable to send VPN logs to CloudWatch Amazon CloudWatch log group: Select vpns2s/log Similarly, enable in Tunnel 2 options Click Create VPN Connection Click Create VPN Connection Wait approximately 5 minutes for the VPN Connection creation to complete Configure Propagation for the Route Tables\nIn the VPC interface, select Route Tables Choose Route Table - Public Select Route Propagation Click Edit Route Propagation In the Edit Route Propagation Interface\nSelect Enable Click Save Complete and Verify that Route Propagation has switched to Yes Similarly, configure Route Propagation for the Private Subnet "
 },
 {
 	"uri": "//localhost:1313/4-vpnsitetositefortigate/",

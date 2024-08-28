@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/vi/3-vpnsitetositeaws/3.1-createvirtualprivategateway/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/3.1-createvirtualprivategateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/3.1-createvirtualprivategateway/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-prerequiste/2.1-createec2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prerequiste/2.1-createec2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prerequiste/2.1-createec2/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -39,8 +63,16 @@
                 />
   </url><url>
     <loc>//localhost:1313/vi/3-vpnsitetositeaws/3.2-createcustomergateway/</loc>
-  </url><url>
-    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.2-create-interface-tunnel12/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-vpnsitetositeaws/3.2-createcustomergateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-vpnsitetositeaws/3.2-createcustomergateway/"
+                />
   </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/2.2-createiamrole/</loc>
     <xhtml:link
@@ -89,10 +121,6 @@
                 hreflang="vi"
                 href="//localhost:1313/vi/3-vpnsitetositeaws/"
                 />
-  </url><url>
-    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.3-createroutingbgp/</loc>
-  </url><url>
-    <loc>//localhost:1313/vi/4-vpnsitetositefortigate/4.4-createpolicy/</loc>
   </url><url>
     <loc>//localhost:1313/vi/2-prerequiste/2.3-createloggroup/</loc>
     <xhtml:link
