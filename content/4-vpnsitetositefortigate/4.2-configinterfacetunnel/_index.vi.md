@@ -23,5 +23,5 @@ Trong giao diện cấu hình Fortigate:
    + **Status** chọn **Enable**
    + Chọn **OK**
 ![fg](/images/4.vpnsitetositefortigate/FG-VPN-Interface3.png)
-3. Kiểm tra lại 2 interface tunnel đã tạo
+3. Kiểm tra lại **2 interface tunnel** đã tạo
 ![fg](/images/4.vpnsitetositefortigate/FG-VPN-Interface4.png)

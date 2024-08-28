@@ -20,5 +20,5 @@ pre : " <b> 4.3 </b> "
       + Neighbors chọn Create New. Hộp Add Neighbor hiện ra để cấu hình tunnel 2
 ![bgp](/images/4.vpnsitetositefortigate/BGP-4.png)
       + IP nhập **169.254.52.5**, Remote AS nhập 64512 -> Chọn OK 
-      + Chọn Apply
+      + Chọn **Apply**
 ![bgp](/images/4.vpnsitetositefortigate/BGP-5.png)
