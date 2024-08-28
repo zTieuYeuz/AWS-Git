@@ -37,4 +37,4 @@ jobs:
           git config user.name 'zTieuYeuz'
           git config user.email 'tranminhthoai788@gmail.com'
           git commit -m 'Updated site'
-          git push          
+          git push        
