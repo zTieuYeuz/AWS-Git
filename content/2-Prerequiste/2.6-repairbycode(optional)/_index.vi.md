@@ -24,7 +24,7 @@ Code này sẽ tạo toàn bộ môi trường như 2.1. [Link down source code]
 
 Để deploy bằng cách sử dụng terraform lên Amazon. Bạn tham khảo  :
   - [Cài đặt và làm quen với AWS CLI trên windows ](https://000011.awsstudygroup.com/vi/)
-  - [Làm việc với Amazon VPC](https://000003.awsstudygroup.com/vi/)
+
 
 1.  Tạo cặp key pair. Mục đích sử dụng trong lúc tạo code để ssh vào các EC2
 
