@@ -5,17 +5,15 @@ weight : 1
 chapter : false
 pre : " <b> 1. </b> "
 ---
-**Session Manager** is a function within the AWS System Manager service, SSM provides verifiable and secure version management without opening incoming ports, without Bastion Host or SSH key management. Session Manager also makes it easy to comply with corporate policies that require controlled access to instances, strict security practices, and fully auditable logs with instance access details, while still providing end-users with one-click cross-platform access to your managed instances.
+**AWS Site-to-Site VPN** is a service that helps securely connect on-premises networks with the AWS cloud over the internet. AWS Site-to-Site VPN allows the creation of an encrypted VPN connection between the on-premises network and AWS, supporting high-security standards, ensuring strict security, and maintaining a stable connection with your network system.
 
-By using Session Manager, you get the following advantages that traditional methods do not have:
+By using AWS Site-to-Site VPN, you will gain the following benefits:
 
-- No need to open port 22 for SSH protocol, so it is more secure.
-- Can be configured so that the connection does not need to go outside the internet, so it is more secure.
-- No need to manage the server's private key to connect to SSH.
-- Centralized management of users using AWS IAM.
-- Access to the server easily and simply with one click.
-- Faster access time than traditional methods like SSH
-- Support many different operating systems such as Linux, Windows, MacOS
-- Log the connection sessions and commands executed while connecting to the server.
-  
-With the above advantages, you can use Session Manager instead of using Bastion host technique to save us time and money when managing Bastion server. 
+- Ensure high security with data encryption throughout the transmission process.
+- Easily integrate with other AWS services such as EC2, VPC, S3, CloudWatch, etc.
+- Centralized management and simplified connection with multiple branches.
+- Support routing protocols like Static Route and BGP to optimize routing.
+- AWS Site-to-Site VPN helps save time and costs, while simplifying the deployment and maintenance of secure connections between on-premises and AWS.
+
+With these advantages, you can also use VPN instead of Direct Connect, which helps save costs when it comes to transmission lines.
+**VPN Cost** of Site-to-Site VPN is calculated based on a fixed cost of approximately 36 USD per month for one VPN Connection. This cost does not include the traffic cost going out of the VPC.

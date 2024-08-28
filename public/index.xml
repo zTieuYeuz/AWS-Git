@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>VPN Site to Site Aws And Fortigate on AWS VPN Site to Site</title>
+    <title>AWS VPN Site to Site</title>
     <link>//localhost:1313/</link>
-    <description>Recent content in VPN Site to Site Aws And Fortigate on AWS VPN Site to Site</description>
+    <description>Recent content on AWS VPN Site to Site</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />

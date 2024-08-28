@@ -12,21 +12,21 @@
     <title>Create Private Subnet :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724833697" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724833697" rel="stylesheet">
-    <link href="/css/hybrid.css?1724833697" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724833697" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724833697" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724833697" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724833697" rel="stylesheet">
-    <link href="/css/theme.css?1724833697" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724833697" rel="stylesheet">
+    <link href="/css/nucleus.css?1724834922" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724834922" rel="stylesheet">
+    <link href="/css/hybrid.css?1724834922" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724834922" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724834922" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724834922" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724834922" rel="stylesheet">
+    <link href="/css/theme.css?1724834922" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724834922" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724833697" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724834922" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724833697"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724834922"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724833697"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724833697"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724834922"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724834922"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724833697"></script>
+<script type="text/javascript" src="/js/search.js?1724834922"></script>
 
     
   </div>
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Accounting" class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="Preparation Steps" class="dd-item 
         parent
         
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Accounting
+           <b> 2. </b> Preparation Steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -254,13 +254,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create Security Groups" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
-           <b> 2.1.4 </b> Create security groups
+           <b> 2.1.4 </b> Create Security Groups
           
             <i class="fas fa-check read-icon"></i>
           
@@ -282,13 +282,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Create Public instance" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Create EC2 in Private Subnet and Public Subnet" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Create Public instance
+           <b> 2.1.5 </b> Create EC2 in Private Subnet and Public Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,34 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="Create user Group" class="dd-item 
+      <li data-nav-id="/2-prerequiste/_index.vi111111/" title="Các bước chuẩn bị" class="dd-item ">
+        <a href="/2-prerequiste/_index.vi111111/">
+         <b> 2. </b> Các bước chuẩn bị
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="Create IAM Role" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Create user Group
+           <b> 2.2 </b> Create IAM Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -347,41 +368,69 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.4-enablelogssm/" title="Budgets" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-prerequiste/2.4-enablelogssm/">
-           <b> 2.4 </b> Budgets
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-prerequiste/2.3-createloggroup/" title="Role AWS" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.3-createloggroup/" title="Create CloudWatch Log Groups" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.3-createloggroup/">
-           <b> 2.3.1 </b> Role AWS
+           <b> 2.3 </b> Create CloudWatch Log Groups
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.4-enablelogssm/" title="Manage SSM Session Logs with CloudWatch Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.4-enablelogssm/">
+           <b> 2.4 </b> Manage SSM Session Logs with CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.5-fortigate/" title="Prepare On-Premise Environment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.5-fortigate/">
+           <b> 2.5 </b> Prepare On-Premise Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -410,13 +459,13 @@
  
   
     
-    <li data-nav-id="/3-vpnsitetositeaws/" title="Configuring Site to Site VPN on AWS" class="dd-item 
+    <li data-nav-id="/4-vpnsitetositefortigate/" title="Configuring Site-to-Site VPN on Fortigate" class="dd-item 
         
         
         
         ">
-      <a href="/3-vpnsitetositeaws/">
-           <b> 3. </b> Configuring Site to Site VPN on AWS
+      <a href="/4-vpnsitetositefortigate/">
+           <b> 4 </b> Configuring Site-to-Site VPN on Fortigate
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,41 +490,13 @@
  
   
     
-    <li data-nav-id="/3-vpnsitetositeaws/3.1-createvirtualprivategateway/" title="Cấu hình virteal private Gateway" class="dd-item 
+    <li data-nav-id="/4-vpnsitetositefortigate/4.1-createtunnel/" title="" class="dd-item 
         
         
         
         ">
-      <a href="/3-vpnsitetositeaws/3.1-createvirtualprivategateway/">
-           <b> 3.1 </b> Cấu hình virteal private Gateway
+      <a href="/4-vpnsitetositefortigate/4.1-createtunnel/">
           
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-vpnsitetositeaws/3.3-createvpn/" title="Cấu hình Site to Site VPN" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-vpnsitetositeaws/3.3-createvpn/">
-           <b> 3.3 </b> Cấu hình Site to Site VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -490,6 +511,32 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-cleanup/">
+           <b> 5 </b> Clean up resources
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -641,7 +688,7 @@
             
           
           
-            <a href='/'>VPN Site to Site Aws And Fortigate</a> > <a href='/2-prerequiste/'>Accounting</a> > <a href='/2-prerequiste/2.1-createec2/'>Preparing VPC and EC2</a> > Create Private Subnet
+            <a href='/'></a> > <a href='/2-prerequiste/'>Preparation Steps</a> > <a href='/2-prerequiste/2.1-createec2/'>Preparing VPC and EC2</a> > Create Private Subnet
           
         
           
@@ -690,7 +737,7 @@
 
 	<h4 id="create-private-subnet">Create Private Subnet</h4>
 <ol>
-<li>Click <strong>Subnets</strong>.
+<li>In the VPC interface, click <strong>Subnets</strong>.
 <ul>
 <li>Click <strong>Create subnet</strong>.</li>
 </ul>
@@ -698,20 +745,101 @@
 </ol>
 <p><img alt="VPC" src="/images/2.prerequisite/017-createsubnet.png"></p>
 <ol start="2">
-<li>At the <strong>Create subnet</strong> page.
+<li>
+<p>On the <strong>Create subnet</strong> page:</p>
 <ul>
-<li>In the <strong>VPC ID</strong> section, click <strong>Lab VPC</strong>.</li>
-<li>In the <strong>Subnet name</strong> field, enter <strong>Lab Private Subnet</strong>.</li>
-<li>In the <strong>Availability Zone</strong> section, select the first Availability zone.</li>
-<li>In the field <strong>IPv4 CIRD block</strong> enter <strong>10.10.2.0/24</strong>.</li>
+<li>In the <strong>VPC ID</strong> field, select <strong>ASG</strong>.</li>
+<li>In the <strong>Subnet name</strong> field, enter <strong>Private Subnet 1</strong>.</li>
+<li>In the <strong>Availability Zone</strong> field, select the first Availability Zone.</li>
+<li>In the <strong>IPv4 CIDR block</strong> field, enter <strong>10.10.100.0/24</strong>.
+<img alt="VPC" src="/images/2.prerequisite/018-createprivatesubnet1.png"></li>
+</ul>
+</li>
+<li>
+<p>Scroll to the bottom of the page and click <strong>Create subnet</strong>.
+<img alt="VPC" src="/images/2.prerequisite/017-createsubnet3.png"></p>
+</li>
+<li>
+<p>Repeat the above steps to create <strong>Private Subnet 2</strong>.
+<img alt="VPC" src="/images/2.prerequisite/018-createprivatesubnet2.png"></p>
+</li>
+<li>
+<p>Next, we will create a custom route table to associate with the <strong>Private Subnet</strong>.</p>
+<ul>
+<li>Click <strong>Route Tables</strong>.</li>
+<li>Click <strong>Create route table</strong>.
+<img alt="VPC" src="/images/2.prerequisite/018-createrouteprivate0.png"></li>
+</ul>
+</li>
+<li>
+<p>On the <strong>Create route table</strong> page:</p>
+<ul>
+<li>In the <strong>Name</strong> field, enter <strong>Route Table Private</strong>.</li>
+<li>In the <strong>VPC</strong> field, select <strong>ASG</strong>.</li>
+<li>Click <strong>Create route table</strong>.
+<img alt="VPC" src="/images/2.prerequisite/018-createrouteprivate1.png"></li>
+</ul>
+</li>
+<li>
+<p>In the Route table - Private interface:</p>
+<ul>
+<li>Select <strong>Subnet Associations</strong>.</li>
+<li>Select <strong>Edit subnet associations</strong>.
+<img alt="VPC" src="/images/2.prerequisite/018-createrouteprivate2.png"></li>
+</ul>
+</li>
+<li>
+<p>In the <strong>Edit subnet associations</strong> interface:</p>
+<ul>
+<li>Select the 2 private subnets.</li>
+<li>Click <strong>Save associations</strong>.
+<img alt="VPC" src="/images/2.prerequisite/018-createprivatesubnet3.png"></li>
 </ul>
 </li>
 </ol>
-<p><img alt="VPC" src="/images/2.prerequisite/018-createsubnet.png"></p>
-<ol start="3">
-<li>Scroll to the bottom of the page, click <strong>Create subnet</strong>.</li>
+<p>The next step is to create NAT gateways to allow EC2 instances in the private subnet to communicate with the internet.</p>
+<h4 id="create-nat-gateway">Create NAT Gateway</h4>
+<p>In this step, we will create a <strong>NAT gateway</strong> to allow EC2 instances in the <strong>private subnet</strong> to access the internet.</p>
+<ol>
+<li>
+<p>Access the <a href="https://ap-southeast-1.console.aws.amazon.com/vpcconsole/">VPC management interface</a>.
+In the NAT gateway interface:</p>
+<ul>
+<li>In the <strong>Name</strong> field, enter <strong>My Natgw</strong>.</li>
+<li>In the <strong>Subnet</strong> field, select <strong>Public subnet 2</strong>.</li>
+<li>In the <strong>Connectivity type</strong> field, select <strong>Public</strong>.</li>
+<li>In the <strong>Elastic IP allocation ID</strong> field, click <strong>Allocate Elastic IP</strong> to create an Elastic IP.</li>
+<li>Click <strong>Create Nat Gateway</strong>.
+<img alt="natgw" src="/images/2.prerequisite/052-natgw.png"></li>
+</ul>
+</li>
+<li>
+<p>Successfully created NAT gateway.
+<img alt="natgw" src="/images/2.prerequisite/053-natgw.png"></p>
+</li>
+<li>
+<p>In the Route table - Private interface:</p>
+<ul>
+<li>Select <strong>Routes</strong>.</li>
+<li>Select <strong>Edit routes</strong>.
+<img alt="natgw" src="/images/2.prerequisite/054-natgw.png"></li>
+</ul>
+</li>
+<li>
+<p>In the <strong>Edit routes</strong> interface:</p>
+<ul>
+<li>Select <strong>Add route</strong>.</li>
+<li>In the <strong>Destination</strong> field, enter <strong>0.0.0.0/0</strong>.</li>
+<li>In the <strong>Target</strong> field, select <strong>NAT Gateway</strong>.</li>
+<li>Click <strong>Save changes</strong>.
+<img alt="natgw" src="/images/2.prerequisite/055-natgw.png"></li>
+</ul>
+</li>
+<li>
+<p>Verify the routes.
+<img alt="natgw" src="/images/2.prerequisite/056-natgw.png"></p>
+</li>
 </ol>
-<p>The next step is to create the necessary security groups for the lab.</p>
 
 
 
@@ -936,6 +1064,88 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1001,7 +1211,7 @@
 			<a class="nav nav-prev" href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Create Public Subnet"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create Security Groups" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1011,19 +1221,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724833697"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724833697"></script>
-    <script src="/js/jquery.sticky.js?1724833697"></script>
-    <script src="/js/featherlight.min.js?1724833697"></script>
-    <script src="/js/highlight.pack.js?1724833697"></script>
+    <script src="/js/clipboard.min.js?1724834922"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724834922"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724834922"></script>
+    <script src="/js/jquery.sticky.js?1724834922"></script>
+    <script src="/js/featherlight.min.js?1724834922"></script>
+    <script src="/js/highlight.pack.js?1724834922"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724833697"></script>
-    <script src="/js/learn.js?1724833697"></script>
-    <script src="/js/hugo-learn.js?1724833697"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724834922"></script>
+    <script src="/js/learn.js?1724834922"></script>
+    <script src="/js/hugo-learn.js?1724834922"></script>
 
-    <link href="/mermaid/mermaid.css?1724833697" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724833697"></script>
+    <link href="/mermaid/mermaid.css?1724834922" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724834922"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

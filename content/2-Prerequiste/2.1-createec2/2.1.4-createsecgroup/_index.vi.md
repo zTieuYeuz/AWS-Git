@@ -13,20 +13,20 @@ Trong bước này chúng ta sẽ tiến hành tạo các security group đượ
 #### Tạo security group cho Linux instance nằm trong public subnet 
 
 1. Truy cập [giao diện quản trị dịch vụ VPC](https://console.aws.amazon.com/vpc)
-  + Click **Security Group**.  
-  + Click **Create security group**.
+     + Click **Security Group**.  
+     + Click **Create security group**.
 
 ![SG](/images/2.prerequisite/019-createsg.png)
 
-3. Tại mục **Security group name**, điền **private_security_group**. 
-  + Tại mục **Description**, điền **SG Public for EC2 Public**.
-  + Tại mục **VPC**, chọn lại **VPC ASG** bạn đã tạo cho bài lab này.
-  + Trong **Inbound rule** ta add 2 rule **SSH** và **All ICMP - IPV4**
+1. Tại mục **Security group name**, điền **private_security_group**. 
+    + Tại mục **Description**, điền **SG Public for EC2 Public**.
+    + Tại mục **VPC**, chọn lại **VPC ASG** bạn đã tạo cho bài lab này.
+    + Trong **Inbound rule** ta add 2 rule **SSH** và **All ICMP - IPV4**
 
 ![SG](/images/2.prerequisite/020-createsg.png)
 
 4. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
-  + Click **Create security group**.
+     + Click **Create security group**.
 
 {{%notice tip%}}
 Các bạn có thể thấy, security group chúng ta tạo sử dụng cho Linux public instance sẽ không cần phải mở các port truyền thống để **ssh** như port **22**.
@@ -42,14 +42,14 @@ Các bạn có thể thấy, security group chúng ta tạo sử dụng cho Linu
 2. Click **Create security group**.
 
 3. Tại mục **Security group name**, điền **Public_security_group**. 
-  + Tại mục **Description**, điền **SG for EC2 Private**.
-  + Tại mục **VPC**, chọn **ASG** bạn đã tạo cho bài lab này.
+     + Tại mục **Description**, điền **SG for EC2 Private**.
+     + Tại mục **VPC**, chọn **ASG** bạn đã tạo cho bài lab này.
 
 ![SG](/images/2.prerequisite/022-createsg.png)
 
-4. Trong **Inbound rule** ta add 1  **All ICMP - IPV4**. Rule này cho phép ping của EC2 nằm trong private subnet
-5. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
-  + Click **Create security group**.
+1. Trong **Inbound rule** ta add 1  **All ICMP - IPV4**. Rule này cho phép ping của EC2 nằm trong private subnet
+2. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
+     + Click **Create security group**.
 
 ![SG](/images/2.prerequisite/023-createsg.png)
 
