@@ -6,9 +6,12 @@ chapter : false
 pre : " <b> 4.1 </b> "
 ---
 
+Trong bài thực hành này, chúng ta tạo và cấu hình IPSEC trên thiết bị **Fortigate** dựa vào [file Configuration](#download-configuration) được download từ Amazon.
 
+{{% notice info %}}
 
-Trong bài thực hành này, chúng ta tạo và cấu hình IPSEC trên thiết bị **Fortigate** dựa vào [file Configuration](#download-configuration) được download từ Amazon.Chi tiết cấu hình như sau:
+1 Lưu ý quan trọng là [file Configuration](#download-configuration) này chứa tất cả thông sổ cấu hình cho toàn bộ các bài thực hành từ 4.1 -> 4.5
+{{% /notice %}}
 
 1.	Truy cập vào VPC
     -   Chọn **Site-to-Site VPN Connection**
