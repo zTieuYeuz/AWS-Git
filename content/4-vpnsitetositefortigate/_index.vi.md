@@ -3,7 +3,7 @@ title : "Cấu hình VPN Site to Site Trên Fortigate"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
-pre : " <b> 4 </b> "
+pre : " <b> 4. </b> "
 ---
 
 Trước khi cấu hình chúng ta tìm hiểu sơ qua về giao thức định tuyến động **BGP**. Vì sao nên dùng **BGP**.
@@ -29,5 +29,5 @@ BGP là lựa chọn tốt cho các mạng lớn, phức tạp và cần khả n
   - [Cấu hình interface tunnel 1 và tunnel 2](4.2-configinterfacetunnel/)
   - [Cấu hình routing BGP](4.3-configroutingbgp/)
   - [Tạo các policy cho VPN](4.4-createpolicy/)
-  - [Kiểm tra tình trạng VPN ](4.5-checkstatusvpn/)
+  - [Kiểm tra tình trạng VPN](4.5-checkstatusvpn/)
 

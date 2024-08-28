@@ -3,7 +3,7 @@ title : "Configuring Site-to-Site VPN on Fortigate"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
-pre : " <b> 4 </b> "
+pre : " <b> 4. </b> "
 ---
 
 Before configuring, let's briefly understand the dynamic routing protocol **BGP** and why it should be used.
