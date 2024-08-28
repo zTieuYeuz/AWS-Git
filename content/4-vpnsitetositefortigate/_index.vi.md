@@ -29,5 +29,5 @@ BGP là lựa chọn tốt cho các mạng lớn, phức tạp và cần khả n
   - [Cấu hình interface tunnel 1 và tunnel 2](4.2-configinterfacetunnel/)
   - [Cấu hình routing BGP](4.3-configroutingbgp/)
   - [Tạo các policy cho VPN](4.4-createpolicy/)
-  - [Kiểm tra tình trạng VPN ](4.5-checkstatusvpn/)
+  - [Kiểm tra tình trạng VPN](4.5-checkstatusvpn/)
 
