@@ -1,5 +1,5 @@
-*---
-title : "Tao Tunnel IPSEC"
+---
+title : "Tạo Tunnel IPSEC"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
@@ -29,8 +29,6 @@ Trong bài thực hành này, chúng ta tạo và cấu hình IPSEC trên thiế
 Lưu ý ở bước này do để các bạn nắm cơ bản phần cấu hình trước để dàng xử lý sự cố nên ở đây mình chọn ikev1. Nếu triển khai thực tế nên sử dụng **ikev2**. Ưu điểm lớn nhất của ikev2 là quá trình đàm phán bắt tay giữa 2 site sẽ nhanh hơn và hỗ trợ nhiều thuật toán bảo mật hơn.
 
 {{% /notice %}}
-
-
 
 
 ##### download-configuration

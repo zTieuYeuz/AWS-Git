@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: AWS VPN Site to Site</title>
+    <title>Tạo Tunnel IPSEC :: AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1724837686" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1724837686" rel="stylesheet">
-    <link href="/css/hybrid.css?1724837686" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1724837686" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1724837686" rel="stylesheet">
-    <link href="/css/auto-complete.css?1724837686" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1724837686" rel="stylesheet">
-    <link href="/css/theme.css?1724837686" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1724837686" rel="stylesheet">
+    <link href="/css/nucleus.css?1724837866" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724837866" rel="stylesheet">
+    <link href="/css/hybrid.css?1724837866" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724837866" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724837866" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724837866" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724837866" rel="stylesheet">
+    <link href="/css/theme.css?1724837866" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724837866" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1724837686" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1724837866" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1724837686"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724837866"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1724837686"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1724837686"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724837866"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724837866"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1724837686"></script>
+<script type="text/javascript" src="/js/search.js?1724837866"></script>
 
     
   </div>
@@ -591,13 +591,13 @@
  
   
     
-    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.1-createtunnel/" title="" class="dd-item 
+    <li data-nav-id="/vi/4-vpnsitetositefortigate/4.1-createtunnel/" title="Tạo Tunnel IPSEC" class="dd-item 
         
         active
         
         ">
       <a href="/vi/4-vpnsitetositefortigate/4.1-createtunnel/">
-          
+           <b> 4.1 </b> Tạo Tunnel IPSEC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -785,7 +785,7 @@
             
           
           
-            <a href='/vi/'></a> > <a href='/vi/4-vpnsitetositefortigate/'>Cấu hình VPN Site to Site Trên Fortigate</a> > 
+            <a href='/vi/'></a> > <a href='/vi/4-vpnsitetositefortigate/'>Cấu hình VPN Site to Site Trên Fortigate</a> > Tạo Tunnel IPSEC
           
         
           
@@ -800,12 +800,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#pre---b-41-b-">*&mdash;
-title : &ldquo;Tao Tunnel IPSEC&rdquo;
-date :  &ldquo;<code>r Sys.Date()</code>&rdquo;
-weight : 1
-chapter : false
-pre : &quot; <!-- raw HTML omitted --> 4.1 <!-- raw HTML omitted --> &quot;</a>
+    <li>
       <ul>
         <li></li>
       </ul>
@@ -827,7 +822,7 @@ pre : &quot; <!-- raw HTML omitted --> 4.1 <!-- raw HTML omitted --> &quot;</a>
           
             <h1>
               
-              
+              Tạo Tunnel IPSEC
             </h1>
           
 
@@ -835,13 +830,7 @@ pre : &quot; <!-- raw HTML omitted --> 4.1 <!-- raw HTML omitted --> &quot;</a>
 
 
 
-	<h2 id="pre---b-41-b-">*&mdash;
-title : &ldquo;Tao Tunnel IPSEC&rdquo;
-date :  &ldquo;<code>r Sys.Date()</code>&rdquo;
-weight : 1
-chapter : false
-pre : &quot; <!-- raw HTML omitted --> 4.1 <!-- raw HTML omitted --> &quot;</h2>
-<p>Trong bài thực hành này, chúng ta tạo và cấu hình IPSEC trên thiết bị <strong>Fortigate</strong> dựa vào <a href="/vi/4-vpnsitetositefortigate/4.1-createtunnel/#download-configuration">file Configuration</a> được download từ Amazon.Chi tiết cấu hình như sau:</p>
+	<p>Trong bài thực hành này, chúng ta tạo và cấu hình IPSEC trên thiết bị <strong>Fortigate</strong> dựa vào <a href="/vi/4-vpnsitetositefortigate/4.1-createtunnel/#download-configuration">file Configuration</a> được download từ Amazon.Chi tiết cấu hình như sau:</p>
 <ol>
 <li>
 <p>Truy cập vào VPC</p>
@@ -1305,19 +1294,19 @@ pre : &quot; <!-- raw HTML omitted --> 4.1 <!-- raw HTML omitted --> &quot;</h2>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1724837686"></script>
-    <script src="/js/perfect-scrollbar.min.js?1724837686"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1724837686"></script>
-    <script src="/js/jquery.sticky.js?1724837686"></script>
-    <script src="/js/featherlight.min.js?1724837686"></script>
-    <script src="/js/highlight.pack.js?1724837686"></script>
+    <script src="/js/clipboard.min.js?1724837866"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724837866"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724837866"></script>
+    <script src="/js/jquery.sticky.js?1724837866"></script>
+    <script src="/js/featherlight.min.js?1724837866"></script>
+    <script src="/js/highlight.pack.js?1724837866"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1724837686"></script>
-    <script src="/js/learn.js?1724837686"></script>
-    <script src="/js/hugo-learn.js?1724837686"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724837866"></script>
+    <script src="/js/learn.js?1724837866"></script>
+    <script src="/js/hugo-learn.js?1724837866"></script>
 
-    <link href="/mermaid/mermaid.css?1724837686" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1724837686"></script>
+    <link href="/mermaid/mermaid.css?1724837866" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724837866"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
