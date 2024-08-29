@@ -36,7 +36,7 @@ Bạn cần tạo sẵn 2 Linux instance thuộc public subnet và private sub
 Để tìm hiểu giao thức định tuyến có thể tham khảo:
   - [Giao thức Border Gateway Protocol(BGP)](https://aws.amazon.com/what-is/border-gateway-protocol/)
 
-Phụ lục
+### Nội Dung
 1. [Chuẩn bị VPC và EC2 Instance](2.1-createec2/)
 2. [Tạo IAM Role](2.2-createiamrole/)
 3. [Tạo loggroup Cloudwatch](2.3-createloggroup/)
