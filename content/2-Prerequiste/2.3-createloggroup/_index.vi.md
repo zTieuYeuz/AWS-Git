@@ -16,12 +16,12 @@ Trong bước này chúng ta sẽ tiến hành tạo 2 **Cloud Watch Log Group**
 3. Tạo **Log Groups** cho ssm:
    + Chọn **Log Groups**
    + Chọn **Create log group**
-   + Log group name nhập **/aws/ssm/hosts**
+   + Log group name nhập ```/aws/ssm/hosts```
    + Chọn **Create**
    ![Loggroup](/images/2.prerequisite/046-LogGroup.png)
    ![Loggroup](/images/2.prerequisite/047-LogGroup.png)
 
 4. Tương tự tạo **Log Groups** cho VPN:
-   + **Name** nhập **vpns2s/log**  
+   + **Name** nhập ```vpns2s/log```
    ![Loggroup](/images/2.prerequisite/048-LogGroup.png)
 

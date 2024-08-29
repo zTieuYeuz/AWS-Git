@@ -6,9 +6,6 @@ chapter : false
 pre : " <b> 3.1 </b> "
 ---
 
-
-
-
 ### Creating a Virtual Private Gateway
 
 1. **Access the VPC Console**

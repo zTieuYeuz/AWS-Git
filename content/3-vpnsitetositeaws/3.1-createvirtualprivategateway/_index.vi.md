@@ -1,5 +1,5 @@
 ---
-title : "Cấu hình virteal private Gateway"
+title : "Cấu hình Virtual Private Gateway"
 date :  "`r Sys.Date()`" 
 weight : 1
 chapter : false

@@ -18,14 +18,14 @@ Trong bước này chúng ta sẽ tiến hành tạo các security group đượ
 
 ![SG](/images/2.prerequisite/019-createsg.png)
 
-1. Tại mục **Security group name**, điền **private_security_group**. 
+2. Tại mục **Security group name**, điền **public_security_group**. 
     + Tại mục **Description**, điền **SG Public for EC2 Public**.
     + Tại mục **VPC**, chọn lại **VPC ASG** bạn đã tạo cho bài lab này.
     + Trong **Inbound rule** ta add 2 rule **SSH** và **All ICMP - IPV4**
 
 ![SG](/images/2.prerequisite/020-createsg.png)
 
-4. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
+3. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
      + Click **Create security group**.
 
 {{%notice tip%}}
@@ -41,20 +41,20 @@ Các bạn có thể thấy, security group chúng ta tạo sử dụng cho Linu
 
 2. Click **Create security group**.
 
-3. Tại mục **Security group name**, điền **Public_security_group**. 
+3. Tại mục **Security group name**, điền **private_security_group**. 
      + Tại mục **Description**, điền **SG for EC2 Private**.
      + Tại mục **VPC**, chọn **ASG** bạn đã tạo cho bài lab này.
+     + Trong **Inbound rule** ta add 1  **All ICMP - IPV4**. Rule này cho phép ping của EC2 nằm trong private subnet
 
 ![SG](/images/2.prerequisite/022-createsg.png)
 
-1. Trong **Inbound rule** ta add 1  **All ICMP - IPV4**. Rule này cho phép ping của EC2 nằm trong private subnet
-2. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
+4. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
      + Click **Create security group**.
 
 ![SG](/images/2.prerequisite/023-createsg.png)
 
 {{%notice tip%}}
-Đối với Instance trong private subnet, chúng ta sẽ dùng  **Session Manager** qua kết nối đã được mã hóa TLS. Vì vậy chúng ta có thể kết nối đến thông qua nat gateway
+Đối với Instance trong private subnet và cả public subnet, chúng ta sẽ dùng  **Session Manager** qua kết nối đã được mã hóa TLS. Vì vậy chúng ta có thể kết nối đến thông qua nat gateway
 Để có thể tối ưu hóa chi phí hơn thì bạn có thể dùng endpoint của **Session Manager** thay vì đi ra internet bằng nat gateway. Ở đây bài của mình sẽ forcus nhiều VPN nên nếu các bạn triển khai endpoint thì tham khảo lab [Làm việc với Amazon System Manager - Session Manager](https://000058.awsstudygroup.com/vi/)
 {{%/notice%}}
 
