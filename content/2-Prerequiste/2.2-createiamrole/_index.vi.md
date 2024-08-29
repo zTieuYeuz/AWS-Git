@@ -22,9 +22,9 @@ Trong bước này chúng ta sẽ tiến hành tạo IAM Role. Trong IAM Role n�
 ![role1](/images/2.prerequisite/040-iamrole.png)
 
 4. Trong thanh tìm kiếm, 
-  + Điền **AmazonSSMManagedInstanceCore** và ấn phím Enter để tìm kiếm policy này.
+  + Điền ```AmazonSSMManagedInstanceCore``` và ấn phím Enter để tìm kiếm policy này.
   + Chọn policy **AmazonSSMManagedInstanceCore**.
-  + Tiếp tục điền **CloudwatchLogsFullAccess** và ấn phím Enter để tìm kiếm policy này.
+  + Tiếp tục điền ```CloudwatchLogsFullAccess``` và ấn phím Enter để tìm kiếm policy này.
   + Chọn policy **CloudwatchLogsFullAccess**
   + Click **Next: Tags.**
 
