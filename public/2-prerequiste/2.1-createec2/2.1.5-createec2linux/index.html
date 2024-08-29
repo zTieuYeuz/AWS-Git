@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.131.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Create EC2 in Private Subnet and Public Subnet :: AWS VPN Site to Site</title>
+
+    
+    <link href="/css/nucleus.css?1724921037" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724921037" rel="stylesheet">
+    <link href="/css/hybrid.css?1724921037" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724921037" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724921037" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724921037" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724921037" rel="stylesheet">
+    <link href="/css/theme.css?1724921037" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724921037" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1724921037" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1724921037"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80" width="60%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>Tran-Minh-Thoai</title><text x="5" y="40" class="cls-1" font-size="20" fill="#fff">Tran Minh Thoai</text></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1724921037"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724921037"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/localhost:1313\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1724921037"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-introduce/">
+           <b> 1. </b> Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/" title="Preparation Steps" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/2-prerequiste/">
+           <b> 2. </b> Preparation Steps
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing VPC and EC2" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/2-prerequiste/2.1-createec2/">
+           <b> 2.1 </b> Preparing VPC and EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.1-createvpc/" title="Create VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.1-createec2/2.1.1-createvpc/">
+           <b> 2.1.1 </b> Create VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Create Public Subnet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">
+           <b> 2.1.2 </b> Create Public Subnet
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Create Private Subnet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
+           <b> 2.1.3 </b> Create Private Subnet
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create Security Groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
+           <b> 2.1.4 </b> Create Security Groups
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Create EC2 in Private Subnet and Public Subnet" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
+           <b> 2.1.5 </b> Create EC2 in Private Subnet and Public Subnet
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="Create IAM Role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.2-createiamrole/">
+           <b> 2.2 </b> Create IAM Role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.3-createloggroup/" title="Create CloudWatch Log Groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.3-createloggroup/">
+           <b> 2.3 </b> Create CloudWatch Log Groups
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.4-enablelogssm/" title="Manage SSM Session Logs with CloudWatch Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.4-enablelogssm/">
+           <b> 2.4 </b> Manage SSM Session Logs with CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.5-fortigate/" title="Prepare On-Premise Environment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.5-fortigate/">
+           <b> 2.5 </b> Prepare On-Premise Environment
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.6-repairbycodeoptional/" title="Prepare Environment with Code (Optional)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.6-repairbycodeoptional/">
+           <b> 2.6 </b> Prepare Environment with Code (Optional)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-vpnsitetositeaws/" title="Configuring Site to Site VPN on AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-vpnsitetositeaws/">
+           <b> 3. </b> Configuring Site to Site VPN on AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-vpnsitetositeaws/3.1-createvirtualprivategateway/" title="Creating a Virtual Private Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-vpnsitetositeaws/3.1-createvirtualprivategateway/">
+           <b> 3.1 </b> Creating a Virtual Private Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-vpnsitetositeaws/3.2-createcustomergateway/" title="Create Customer Gateways" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-vpnsitetositeaws/3.2-createcustomergateway/">
+           <b> 3.2 </b> Create Customer Gateways
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-vpnsitetositeaws/3.3-createvpn/" title="Creating a VPN Connection" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-vpnsitetositeaws/3.3-createvpn/">
+           <b> 3.3 </b> Creating a VPN Connection
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/" title="Configuring Site-to-Site VPN on Fortigate" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/">
+           <b> 4. </b> Configuring Site-to-Site VPN on Fortigate
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/4.1-createtunnelipsec/" title="Create IPSEC Tunnel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/4.1-createtunnelipsec/">
+           <b> 4.1 </b> Create IPSEC Tunnel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/4.2-configinterfacetunnel/" title="Configure Interface Tunnel 1 &amp; 2 on Fortigate" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/4.2-configinterfacetunnel/">
+           <b> 4.2 </b> Configure Interface Tunnel 1 &amp; 2 on Fortigate
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/4.3-configroutingbgp/" title="Configure Dynamic Route BGP" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/4.3-configroutingbgp/">
+           <b> 4.3 </b> Configure Dynamic Route BGP
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/4.4-createpolicy/" title="Create Policy for VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/4.4-createpolicy/">
+           <b> 4.4 </b> Create Policy for VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-vpnsitetositefortigate/4.5-checkstatusvpn/" title="Check VPN Status" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-vpnsitetositefortigate/4.5-checkstatusvpn/">
+           <b> 4.5 </b> Check VPN Status
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-cleanup/">
+           <b> 5 </b> Clean up resources
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="//localhost:1313/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="//localhost:1313/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>06-08-2024</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <a href="https://www.linkedin.com/in/minhthoai-tran-52b1a0194/"  style="color:orange">Trần Minh Thoại  </a> <br>
+                <a href="https"  style="color:orange">Trần Văn Thắng </a> <br>
+                
+               
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/2-prerequiste/'>Preparation Steps</a> > <a href='/2-prerequiste/2.1-createec2/'>Preparing VPC and EC2</a> > Create EC2 in Private Subnet and Public Subnet
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Create EC2 in Private Subnet and Public Subnet
+            </h1>
+          
+
+        
+
+
+
+	<ol>
+<li>Access the <a href="https://console.aws.amazon.com/ec2/v2/home">EC2 service management interface</a></li>
+</ol>
+<ul>
+<li>Click <strong>Instances</strong>.</li>
+<li>Click <strong>Launch instances</strong>.</li>
+</ul>
+<p><img alt="EC2" src="/images/2.prerequisite/027-createec2.png"></p>
+<ol start="2">
+<li>On the <strong>Step 1: Choose an Amazon Machine Image (AMI)</strong> page:</li>
+</ol>
+<ul>
+<li>Click <strong>Select</strong> to choose the <strong>Amazon Linux 2 AMI</strong>.</li>
+</ul>
+<p><img alt="EC2" src="/images/2.prerequisite/028-createec2.png"></p>
+<ol start="3">
+<li>Scroll down to:</li>
+</ol>
+<ul>
+<li>Select the instance type <strong>t2.micro</strong>.</li>
+<li>In the <strong>Network</strong> field, select <strong>ASG</strong>.</li>
+<li>In the <strong>Subnet</strong> field, select <strong>Public Subnet 1</strong>.</li>
+<li>In the <strong>Auto-assign Public IP</strong> field, select <strong>Enable</strong>.</li>
+<li>Select <strong>Select an existing security group</strong>.</li>
+<li>Select the security group <strong>public_security_group</strong>.</li>
+</ul>
+<p><img alt="EC2" src="/images/2.prerequisite/029-createec2.png">
+<img alt="EC2" src="/images/2.prerequisite/030-createec2.png"></p>
+<ol start="4">
+<li>In the <strong>Advanced Details</strong> section:</li>
+</ol>
+<ul>
+<li>In the <strong>IAM instance profile</strong> field, select <strong>SSM-Role</strong>.</li>
+<li>Click <strong>Launch instance</strong>.</li>
+</ul>
+<p><img alt="EC2" src="/images/2.prerequisite/031-createec2.png"></p>
+<ol start="5">
+<li>Repeat steps 2-4 to create another EC2 instance, but note the following changes:
+<ul>
+<li>In the <strong>Subnet</strong> field, select <strong>Private Subnet 2</strong>.</li>
+<li>In the <strong>Auto-assign Public IP</strong> field, select <strong>Disable</strong>.</li>
+<li>Select the security group <strong>private_security_group</strong>.</li>
+<li>Follow the rest of the steps as in steps 2-4.</li>
+<li>After creation, you should see the following result:
+<img alt="VPC" src="/images/2.prerequisite/034-createec2.png"></li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create Security Groups"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/2-prerequiste/2.2-createiamrole/" title="Create IAM Role" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1724921037"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724921037"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724921037"></script>
+    <script src="/js/jquery.sticky.js?1724921037"></script>
+    <script src="/js/featherlight.min.js?1724921037"></script>
+    <script src="/js/highlight.pack.js?1724921037"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724921037"></script>
+    <script src="/js/learn.js?1724921037"></script>
+    <script src="/js/hugo-learn.js?1724921037"></script>
+
+    <link href="/mermaid/mermaid.css?1724921037" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724921037"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
