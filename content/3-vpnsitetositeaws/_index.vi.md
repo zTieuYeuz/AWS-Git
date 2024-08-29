@@ -28,6 +28,6 @@ Bài lab giúp chúng ta học được cách thiết lập một kết nối Si
 Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( **VPC ASG** ) và Branch office đặt tại DC On-premises để có sự khác biệt về mặt network. Trên VPC  thực hiện tạo EC2 cho phép SSM ,và 1 PC ở DC. Việc ta cần làm là cấu hình VPN để các địa chỉ Private IP ở 2 đầu có thể ping được lẫn nhau sử dụng VPN Site-to-Site.
 
 Phụ lục
-1. [Tạo Virtual Private Gateway](/content/3-vpnsitetositeaws/3.1-createvirtualprivategateway/_index.vi.md)
-2. [Cấu hình Customer Gateway](/content/3-vpnsitetositeaws/3.2-createcustomergateway/_index.vi.md)
-3. [Tạo kết nối VPN](/content/3-vpnsitetositeaws/3.3-createVPN/_index.vi.md)
+1. [Tạo Virtual Private Gateway](/content/3-vpnsitetositeaws/3.1-createvirtualprivategateway/)
+2. [Cấu hình Customer Gateway](/content/3-vpnsitetositeaws/3.2-createcustomergateway/)
+3. [Tạo kết nối VPN](/content/3-vpnsitetositeaws/3.3-createVPN/)
