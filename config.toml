@@ -1,3 +1,6 @@
+baseURL = "https://ztieuyeuz.github.io/workshop.github.io/"
+relativeURLs = true
+canonifyURLs = true
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
@@ -32,7 +35,7 @@ weight = 20
 title = "AWS VPN Site to Site"
 weight = 2
 languageName = "Tiếng Việt"
-
+# baseURL = "https://ztieuyeuz.github.io/webaws.github.io/vi/"
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
 identifier = "AWS Study Group FB"
